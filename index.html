@@ -3,47 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joyería Relojería Nell — Granada</title>
-  <meta name="description" content="Joyería y relojería de alta gama en el corazón de Granada. Colecciones exclusivas, relojes de precisión y servicio experto de reparación. C. Pedro Antonio de Alarcón, 45." />
+  <title>Joyería Relojería Nell en Granada | Reparación y tasación</title>
+  <meta name="description" content="Joyería y relojería en C. Pedro Antonio de Alarcón, 45, Granada: joyas, relojes, reparación, restauración y tasación. Presupuesto gratis, sin compromiso." />
+  <link rel="canonical" href="https://joyeriagranada-nell.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Joyería Relojería Nell en Granada | Reparación y tasación" />
+  <meta property="og:description" content="Joyería y relojería en C. Pedro Antonio de Alarcón, 45, Granada: joyas, relojes, reparación, restauración y tasación. Presupuesto gratis, sin compromiso." />
+  <meta property="og:url" content="https://joyeriagranada-nell.vercel.app/" />
   <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
   <!-- Marca que el JavaScript está activo: sin él, todo el contenido se ve sin animaciones -->
   <script>document.documentElement.classList.add('js');</script>
 
-  <!--
-    DATOS ESTRUCTURADOS LocalBusiness (JewelryStore) — DESACTIVADOS.
-    No se ha podido confirmar que el negocio exista con estos datos (ver PENDIENTES-CLIENTE.md).
-    Para activarlos: corregir los datos con el cliente, quitar las marcas de comentario
-    (borrar las dos líneas que contienen la palabra ACTIVAR) y validar en https://search.google.com/test/rich-results
-  -->
-  <!-- ACTIVAR
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "JewelryStore",
-    "name": "Joyería Relojería Nell",
-    "description": "Joyería y relojería en Granada: joyas, relojes, reparación, restauración y tasación.",
-    "url": "https://DOMINIO-PENDIENTE/",
-    "telephone": "+34958267401",
-    "foundingDate": "1985",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Calle Pedro Antonio de Alarcón, 45",
-      "postalCode": "18002",
-      "addressLocality": "Granada",
-      "addressRegion": "Granada",
-      "addressCountry": "ES"
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "14:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:30" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
-    ],
-    "hasMap": "ENLACE-FICHA-GOOGLE-PENDIENTE",
-    "sameAs": ["ENLACE-FICHA-GOOGLE-PENDIENTE"]
-  }
-  </script>
-  ACTIVAR -->
   <style>
     /* ══════════════════════════════
        FUENTES (alojadas en /fonts, sin llamadas a Google)
@@ -515,12 +487,13 @@
       font-style: italic;
       font-size: clamp(1.125rem, 2.2vw, 1.625rem);
       color: var(--stone-light);
-      max-width: 28rem;
+      max-width: 36rem;
       line-height: 1.65;
       margin-bottom: 2.5rem;
       opacity: 0;
       animation: anim-fade-up .9s cubic-bezier(.22,1,.36,1) 1.35s forwards;
     }
+    .hero-sub a { color: var(--gold-light); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
     .hero-btns {
       display: flex;
@@ -1636,6 +1609,33 @@
       *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
     }
 
+    /* ══ PREGUNTAS FRECUENTES ══ */
+    #preguntas { background: var(--cream); }
+    .faq-list { max-width: 54rem; border-top: 1px solid rgba(26,26,26,.15); }
+    .faq-item { border-bottom: 1px solid rgba(26,26,26,.15); }
+    .faq-item summary {
+      list-style: none; cursor: pointer; position: relative;
+      padding: 1.5rem 2.5rem 1.5rem 0;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400;
+      color: var(--charcoal); transition: color .3s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+'; position: absolute; right: .25rem; top: 50%; transform: translateY(-50%);
+      font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 300; color: var(--gold-deep);
+    }
+    .faq-item[open] summary::after { content: '–'; }
+    .faq-item summary:hover, .faq-item summary:focus-visible { color: var(--gold-deep); }
+    .faq-item p {
+      font-family: 'Inter', sans-serif; font-size: .85rem; line-height: 1.85;
+      color: var(--stone); max-width: 44rem; padding: 0 0 1.75rem;
+    }
+    .faq-item a { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 3px; }
+    .hours-updated { margin-top: 1.25rem; font-size: .75rem; color: var(--stone); text-align: center; }
+
+    /* Menú con 6 enlaces: menos separación en pantallas de 1024–1279 px */
+    @media (min-width:1024px) and (max-width:1279px) { .nav-links { gap: 1.5rem; } }
+
     /* ── Contraste (WCAG 2.1 AA, mínimo 4,5:1 en texto normal) ──
        El gris --stone (#7A7065) da 3,6–4,1:1 sobre los fondos negros: no llega.
        En las secciones oscuras se sustituye por #A09590 (6,0–6,9:1). Sobre crema sigue
@@ -1647,6 +1647,26 @@
     .footer-col-title { font-size: .65rem; }
     .footer-copy, .footer-legal a, .back-top { font-size: .7rem; }
   </style>
+  <!-- Datos estructurados de las preguntas frecuentes (mismo texto que la sección #preguntas) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "dateModified": "2026-11-10",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿Dónde está Joyería Relojería Nell?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En la C. Pedro Antonio de Alarcón, 45, 18002 Granada." } },
+      { "@type": "Question", "name": "¿Qué horario tiene la joyería?",
+        "acceptedAnswer": { "@type": "Answer", "text": "De lunes a viernes, de 10:00 a 14:00 y de 17:00 a 20:30. Los sábados, de 10:00 a 14:00. Los domingos está cerrada. Horario vigente a 10 de noviembre de 2026." } },
+      { "@type": "Question", "name": "¿Qué servicios ofrecen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Venta de joyas y relojes, reparación de joyas y relojes, restauración de piezas antiguas y tasación." } },
+      { "@type": "Question", "name": "¿Cuánto cuesta el presupuesto de una reparación?",
+        "acceptedAnswer": { "@type": "Answer", "text": "El presupuesto es gratuito y sin compromiso: se lleva la pieza a la tienda y se valora antes de empezar cualquier trabajo." } },
+      { "@type": "Question", "name": "¿Hace falta pedir cita?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, se puede ir sin cita en horario de apertura. Para tasaciones o restauraciones complejas conviene llamar antes al +34 958 26 74 01." } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1666,6 +1686,7 @@
           <li><a href="#relojeria">Relojería</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#historia">Historia</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -1687,6 +1708,7 @@
   <a href="#relojeria"   class="mobile-menu-link" onclick="closeMobileMenu()">Relojería</a>
   <a href="#servicios"   class="mobile-menu-link" onclick="closeMobileMenu()">Servicios</a>
   <a href="#historia"    class="mobile-menu-link" onclick="closeMobileMenu()">Historia</a>
+  <a href="#preguntas"   class="mobile-menu-link" onclick="closeMobileMenu()">Preguntas</a>
   <a href="#contacto"    class="mobile-menu-link" onclick="closeMobileMenu()">Contacto</a>
   <a href="#cita"        class="mobile-menu-cta"  onclick="closeMobileMenu()">Reservar Cita</a>
   <address class="mobile-menu-addr">
@@ -1706,7 +1728,7 @@
 
     <div class="hero-eyebrow">
       <div class="hero-eyebrow-line" aria-hidden="true"></div>
-      <span class="hero-eyebrow-text">Granada · Desde 1985</span>
+      <span class="hero-eyebrow-text">Granada · Joyería y relojería</span>
     </div>
 
     <h1 class="hero-h1">
@@ -1721,7 +1743,7 @@
     <div class="hero-divider" aria-hidden="true"></div>
 
     <p class="hero-sub">
-      El tiempo que permanece. Joyas y relojes de alta gama, con décadas de tradición artesanal en el corazón de Granada.
+      Joyería Relojería Nell es una joyería y relojería en la C. Pedro Antonio de Alarcón, 45, en Granada. Vendemos <a href="#colecciones">joyas</a> y <a href="#relojeria">relojes</a>, y <a href="#servicios">reparamos, restauramos y tasamos</a> sus piezas con presupuesto gratuito.
     </p>
 
     <div class="hero-btns">
@@ -1770,7 +1792,7 @@
 
     <div class="section-header">
       <h2 class="section-title on-light reveal">
-        Joyas que cuentan<br><em>tu historia</em>
+        Joyas en Granada que<br><em>cuentan tu historia</em>
       </h2>
       <p class="section-header-text reveal d2">
         Cada pieza nace de un diálogo entre el artesano y el material. Seleccionamos únicamente metales y piedras de la más alta calidad.
@@ -1783,7 +1805,7 @@
 
       <article class="coll-card reveal">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80&fit=crop" alt="Anillo de compromiso de oro blanco con diamante central y orla de oro rosa sobre fondo negro" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=75&fit=crop&fm=webp" width="600" height="400" alt="Anillo de compromiso de oro blanco con diamante central y orla de oro rosa sobre fondo negro" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <span class="coll-badge">Más solicitado</span>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
@@ -1799,7 +1821,7 @@
 
       <article class="coll-card reveal d1">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80&fit=crop" alt="Dos collares dorados superpuestos, uno con colgante de piedra azul y otro con media luna de brillantes" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=75&fit=crop&fm=webp" width="600" height="900" alt="Dos collares dorados superpuestos, uno con colgante de piedra azul y otro con media luna de brillantes" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
         </div>
@@ -1814,7 +1836,7 @@
 
       <article class="coll-card reveal d2">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&q=80&fit=crop" alt="Pendientes de oro en forma de flor con piedra central y orla de circonitas" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&q=75&fit=crop&fm=webp" width="600" height="400" alt="Pendientes de oro en forma de flor con piedra central y orla de circonitas" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
         </div>
@@ -1829,7 +1851,7 @@
 
       <article class="coll-card reveal d3">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1617191880362-aac615de3c26?w=600&q=80&fit=crop" alt="Brazaletes dorados con engastes de piedras rojas" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1617191880362-aac615de3c26?w=600&q=75&fit=crop&fm=webp" width="600" height="422" alt="Brazaletes dorados con engastes de piedras rojas" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <span class="coll-badge">Nueva colección</span>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
@@ -1870,10 +1892,10 @@
 
     <div class="section-header">
       <h2 class="section-title reveal">
-        El arte de medir<br><em>el tiempo</em>
+        Relojería en Granada:<br><em>el arte del tiempo</em>
       </h2>
       <p class="section-header-text reveal d2" style="color:var(--stone);">
-        Distribuidores oficiales y asesores de los mejores fabricantes suizos y japoneses. Le ayudamos a encontrar el reloj que lo definirá.
+        Asesoramiento personalizado en relojería suiza y japonesa. Le ayudamos a encontrar el reloj que lo definirá.
       </p>
     </div>
 
@@ -1883,7 +1905,7 @@
 
       <div class="watch-card reveal">
         <div class="watch-img-wrap">
-          <img src="https://images.unsplash.com/photo-1618337978865-f02783a02355?w=900&q=80&fit=crop" alt="Reloj de esfera negra con caja dorada y correa de malla en una muñeca" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1618337978865-f02783a02355?w=900&q=75&fit=crop&fm=webp" width="900" height="1350" alt="Reloj de esfera negra con caja dorada y correa de malla en una muñeca" loading="lazy" />
           <div class="watch-img-overlay" aria-hidden="true"></div>
         </div>
         <div class="watch-body">
@@ -1902,7 +1924,7 @@
 
       <div class="watch-card reverse reveal d1">
         <div class="watch-img-wrap">
-          <img src="https://images.unsplash.com/photo-1717157197005-b851de4abc63?w=900&q=80&fit=crop" alt="Reloj clásico de esfera plateada con correa de piel negra sobre un cojín de ante" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1717157197005-b851de4abc63?w=900&q=75&fit=crop&fm=webp" width="900" height="600" alt="Reloj clásico de esfera plateada con correa de piel negra sobre un cojín de ante" loading="lazy" />
           <div class="watch-img-overlay" aria-hidden="true"></div>
         </div>
         <div class="watch-body">
@@ -1948,10 +1970,10 @@
 
     <div class="section-header">
       <h2 class="section-title on-light reveal">
-        El cuidado que sus<br><em>joyas merecen</em>
+        Reparación, restauración<br><em>y tasación de joyas</em>
       </h2>
       <p class="section-header-text reveal d2">
-        Más de tres décadas perfeccionando el arte de la restauración. Cada pieza que entra en nuestro taller recibe la misma dedicación que si fuera nuestra.
+        Un taller propio dedicado a la reparación y la restauración. Cada pieza que entra en nuestro taller recibe la misma dedicación que si fuera nuestra.
       </p>
     </div>
 
@@ -1976,7 +1998,7 @@
         <div class="svc-num" aria-hidden="true">02</div>
         <h3 class="svc-title">Reparación de Relojes</h3>
         <div class="svc-rule" aria-hidden="true"></div>
-        <p class="svc-desc">Servicio técnico oficial para las principales marcas. Nuestros relojeros certificados garantizan cada revisión con la precisión que su reloj merece.</p>
+        <p class="svc-desc">Revisión y reparación de relojes mecánicos y de cuarzo, con la precisión que su reloj merece.</p>
         <ul class="svc-list">
           <li><span class="svc-dot" aria-hidden="true"></span>Revisión y limpieza de movimiento</li>
           <li><span class="svc-dot" aria-hidden="true"></span>Sustitución de piezas originales</li>
@@ -2000,13 +2022,13 @@
 
       <div class="svc-card reveal d3">
         <div class="svc-num" aria-hidden="true">04</div>
-        <h3 class="svc-title">Tasación Oficial</h3>
+        <h3 class="svc-title">Tasación</h3>
         <div class="svc-rule" aria-hidden="true"></div>
-        <p class="svc-desc">Certificados de tasación oficiales para seguros, herencias y transacciones. Nuestros peritos certificados emiten documentación con total validez legal.</p>
+        <p class="svc-desc">Tasación de joyas y relojes para seguros, herencias o venta, con un informe por escrito de cada pieza.</p>
         <ul class="svc-list">
           <li><span class="svc-dot" aria-hidden="true"></span>Tasación para seguros</li>
           <li><span class="svc-dot" aria-hidden="true"></span>Valoración de herencias</li>
-          <li><span class="svc-dot" aria-hidden="true"></span>Peritajes judiciales</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Valoración de joyas antiguas</li>
           <li><span class="svc-dot" aria-hidden="true"></span>Certificados de autenticidad</li>
         </ul>
       </div>
@@ -2044,7 +2066,7 @@
       <!-- Image (first in DOM → visible on mobile before text) -->
       <div class="heritage-img-wrap reveal d1">
         <div class="heritage-img">
-          <img src="https://images.unsplash.com/photo-1655111396188-8dd88ceb8b4d?w=700&q=80&fit=crop" alt="Orfebre soldando una pieza con un soplete en el banco de trabajo del taller" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1655111396188-8dd88ceb8b4d?w=700&q=75&fit=crop&fm=webp" width="700" height="1050" alt="Orfebre soldando una pieza con un soplete en el banco de trabajo del taller" loading="lazy" />
         </div>
         <div class="heritage-deco-br" aria-hidden="true"></div>
         <div class="heritage-deco-tl" aria-hidden="true"></div>
@@ -2053,20 +2075,20 @@
       <!-- Text (order:1 on desktop → stays left column) -->
       <div class="heritage-text-col">
         <h2 class="heritage-title reveal">
-          Décadas de <em>oficio</em>,<br>una sola promesa.
+          Una joyería <em>familiar</em>,<br>una sola promesa.
         </h2>
         <div class="heritage-rule reveal"></div>
         <div class="heritage-copy reveal d1">
-          <p>Joyería Relojería Nell abrió sus puertas en Granada hace más de cuatro décadas. Desde el primer día, nuestra familia entendió que vender joyas y relojes no es simplemente un comercio: es custodiar los momentos más significativos de la vida de las personas.</p>
+          <p>Joyería Relojería Nell es una joyería familiar de Granada. Desde el primer día entendimos que vender joyas y relojes no es simplemente un comercio: es custodiar los momentos más significativos de la vida de las personas.</p>
           <p>Un anillo de compromiso, un reloj heredado del abuelo, una pulsera que recuerda un viaje especial. Cada pieza que pasa por nuestras manos tiene un peso emocional que nos obliga a tratarla con el máximo respeto y maestría.</p>
-          <p>Situados en el corazón de Granada, en la calle Pedro Antonio de Alarcón, hemos servido a generaciones de familias granadinas que regresan año tras año.</p>
+          <p>Situados en el corazón de Granada, en la calle Pedro Antonio de Alarcón, atendemos a familias granadinas que confían en nosotros para sus piezas más especiales.</p>
         </div>
         <div class="heritage-values reveal d2">
           <div class="heritage-value">
             <span class="heritage-value-num" aria-hidden="true">1</span>
             <div class="heritage-value-body">
               <h3>Tradición</h3>
-              <p>Técnicas orfebres heredadas y perfeccionadas durante décadas. El saber hacer no se improvisa.</p>
+              <p>Técnicas orfebres tradicionales aplicadas con paciencia. El saber hacer no se improvisa.</p>
             </div>
           </div>
           <div class="heritage-value">
@@ -2088,137 +2110,51 @@
 
     </div><!-- /heritage-grid -->
 
-    <!-- Timeline -->
-    <div class="timeline reveal">
-      <p class="timeline-label">Nuestra trayectoria</p>
-      <div class="timeline-grid">
-        <div class="timeline-cell">
-          <span class="timeline-year">1985</span>
-          <span class="timeline-event">Fundación de la joyería en Granada</span>
-        </div>
-        <div class="timeline-cell">
-          <span class="timeline-year">1998</span>
-          <span class="timeline-event">Ampliación del taller de restauración</span>
-        </div>
-        <div class="timeline-cell">
-          <span class="timeline-year">2010</span>
-          <span class="timeline-event">Distribución oficial de marcas suizas</span>
-        </div>
-        <div class="timeline-cell">
-          <span class="timeline-year">Hoy</span>
-          <span class="timeline-event">Tres generaciones de excelencia artesanal</span>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
 
-<!-- ══════════ TESTIMONIALS ══════════ -->
-<section id="testimonios" class="section-pad">
+<!-- ══════════ FAQ ══════════ -->
+<section id="preguntas" class="section-pad" aria-labelledby="faq-title">
   <div class="container">
 
     <div class="eyebrow reveal">
       <div class="eyebrow-line dark"></div>
-      <span class="eyebrow-text">Testimonios</span>
+      <span class="eyebrow-text">Preguntas frecuentes</span>
     </div>
 
-    <div class="section-header" style="margin-bottom:3rem;">
-      <h2 class="section-title on-light reveal">
-        Lo que dicen quienes<br><em>confían en nosotros</em>
+    <div class="section-header">
+      <h2 class="section-title on-light reveal" id="faq-title">
+        Preguntas frecuentes sobre<br><em>la joyería en Granada</em>
       </h2>
+      <p class="section-header-text reveal d2">
+        Respuestas rápidas sobre dirección, horario, servicios y presupuestos. Datos actualizados el <time datetime="2026-11-10">10 de noviembre de 2026</time>.
+      </p>
     </div>
 
     <div class="gold-rule w-med"></div>
 
-    <div class="testimonial-wrap">
-      <div class="big-quote" aria-hidden="true">&ldquo;</div>
-
-      <!-- TESTIMONIOS: confirmar con el cliente que son reseñas reales y que tiene permiso para publicarlas -->
-      <div class="testi-slides" id="testi-slides">
-        <figure class="testi-slide active" id="testi-1">
-          <blockquote class="testimonial-text">
-            Llevé el reloj de mi padre para repararlo, pensando que ya no tenía solución. En Nell lo dejaron como nuevo. El cuidado con el que trataron una pieza tan personal fue conmovedor.
-          </blockquote>
-          <figcaption class="testimonial-author">
-            <div class="author-rule" aria-hidden="true"></div>
-            <div>
-              <p class="author-name">María Carmen R.</p>
-              <p class="author-ctx">Restauración de reloj de familia · Granada</p>
-            </div>
-          </figcaption>
-        </figure>
-        <figure class="testi-slide" id="testi-2">
-          <blockquote class="testimonial-text">
-            Compramos los anillos de compromiso en Nell hace ocho años. Siguen siendo perfectos, y cada vez que volvemos a la tienda nos reciben como si fuéramos familia. Eso no tiene precio.
-          </blockquote>
-          <figcaption class="testimonial-author">
-            <div class="author-rule" aria-hidden="true"></div>
-            <div>
-              <p class="author-name">Alejandro &amp; Sofía M.</p>
-              <p class="author-ctx">Anillos de compromiso · Granada</p>
-            </div>
-          </figcaption>
-        </figure>
-        <figure class="testi-slide" id="testi-3">
-          <blockquote class="testimonial-text">
-            La tasación fue impecable: profesional, documentada y completamente transparente. Nunca me sentí presionado. Solo asesoramiento honesto del principio al fin.
-          </blockquote>
-          <figcaption class="testimonial-author">
-            <div class="author-rule" aria-hidden="true"></div>
-            <div>
-              <p class="author-name">Francisco J. L.</p>
-              <p class="author-ctx">Tasación oficial · Granada</p>
-            </div>
-          </figcaption>
-        </figure>
-        <figure class="testi-slide" id="testi-4">
-          <blockquote class="testimonial-text">
-            Buscaba un Longines específico y me ayudaron a encontrarlo, me explicaron cada detalle técnico y me dieron el tiempo que necesitaba para decidir. Rara vez se ve ese nivel de servicio.
-          </blockquote>
-          <figcaption class="testimonial-author">
-            <div class="author-rule" aria-hidden="true"></div>
-            <div>
-              <p class="author-name">Isabel T.</p>
-              <p class="author-ctx">Compra de reloj · Armilla, Granada</p>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="testi-nav">
-        <button type="button" class="testi-btn" onclick="changeT(-1)" aria-label="Testimonio anterior">
-          <svg width="15" height="7" viewBox="0 0 15 7" fill="none" style="transform:rotate(180deg)" aria-hidden="true">
-            <path d="M0 3.5H13M13 3.5L10 0.5M13 3.5L10 6.5" stroke="currentColor" stroke-width="1"/>
-          </svg>
-        </button>
-        <div class="dots" id="testi-dots">
-          <button type="button" class="dot active" onclick="goT(0)" aria-label="Testimonio 1" aria-current="true"></button>
-          <button type="button" class="dot"        onclick="goT(1)" aria-label="Testimonio 2"></button>
-          <button type="button" class="dot"        onclick="goT(2)" aria-label="Testimonio 3"></button>
-          <button type="button" class="dot"        onclick="goT(3)" aria-label="Testimonio 4"></button>
-        </div>
-        <button type="button" class="testi-btn" onclick="changeT(1)" aria-label="Testimonio siguiente">
-          <svg width="15" height="7" viewBox="0 0 15 7" fill="none" aria-hidden="true">
-            <path d="M0 3.5H13M13 3.5L10 0.5M13 3.5L10 6.5" stroke="currentColor" stroke-width="1"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- ENLACE PROVISIONAL: búsqueda en Google Maps. Sustituir por el enlace de la ficha real del cliente -->
-      <div class="rating-strip reveal">
-        <a class="rating-link" href="https://www.google.com/maps/search/?api=1&amp;query=Joyer%C3%ADa+Relojer%C3%ADa+Nell%2C+Calle+Pedro+Antonio+de+Alarc%C3%B3n+45%2C+Granada" target="_blank" rel="noopener noreferrer">
-        <div class="stars-row" aria-hidden="true">
-          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
-          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
-          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
-          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
-          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
-        </div>
-        <p class="rating-text">Valoración media de <strong>4,9 / 5</strong> en más de 200 reseñas de Google · <span>Ver reseñas</span><span class="visually-hidden"> (se abre en una pestaña nueva)</span></p>
-        </a>
-      </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>¿Dónde está Joyería Relojería Nell?</summary>
+        <p>En la C. Pedro Antonio de Alarcón, 45, 18002 Granada. Puede ver cómo llegar en la sección de <a href="#contacto">contacto</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué horario tiene la joyería?</summary>
+        <p>De lunes a viernes, de 10:00 a 14:00 y de 17:00 a 20:30. Los sábados, de 10:00 a 14:00. Los domingos está cerrada. Horario vigente a <time datetime="2026-11-10">10 de noviembre de 2026</time>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué servicios ofrecen?</summary>
+        <p>Venta de <a href="#colecciones">joyas</a> y <a href="#relojeria">relojes</a>, reparación de joyas y relojes, restauración de piezas antiguas y tasación. Tiene el detalle de cada uno en <a href="#servicios">servicios</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta el presupuesto de una reparación?</summary>
+        <p>El presupuesto es gratuito y sin compromiso: se lleva la pieza a la tienda y se valora antes de empezar cualquier trabajo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hace falta pedir cita?</summary>
+        <p>No, se puede ir sin cita en horario de apertura. Para tasaciones o restauraciones complejas conviene llamar antes al <a href="tel:+34958267401">+34 958 26 74 01</a>. Más información en <a href="#cita">reservar cita</a>.</p>
+      </details>
     </div>
 
   </div>
@@ -2271,6 +2207,7 @@
         </div>
       </div>
     </div>
+    <p class="hours-updated reveal d3">Horario actualizado el <time datetime="2026-11-10">10 de noviembre de 2026</time>.</p>
 
   </div>
 </section>
@@ -2368,7 +2305,7 @@
             <button type="button" class="btn-outline map-load" id="map-load">Ver mapa aquí</button>
             <a class="btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Calle+Pedro+Antonio+de+Alarc%C3%B3n+45%2C+Granada" target="_blank" rel="noopener noreferrer">Cómo llegar<span class="visually-hidden"> (Google Maps, se abre en una pestaña nueva)</span></a>
           </div>
-          <p class="map-ph-note">El mapa es de Google y se carga solo si lo pide. Al cargarlo, Google puede usar cookies. <a href="cookies.html">Más información</a></p>
+          <p class="map-ph-note">El mapa es de Google y se carga solo si lo pide. Al cargarlo, Google puede usar cookies. <a href="/cookies">Más información</a></p>
         </div>
         <div class="map-border" aria-hidden="true"></div>
         <div class="map-caption" aria-hidden="true">
@@ -2393,7 +2330,7 @@
           <span class="footer-logo-name">NELL</span>
           <span class="footer-logo-sub">Joyería · Relojería</span>
         </a>
-        <p class="footer-about">Tradición orfebre y atención personalizada en el corazón de Granada desde 1985. Cada pieza, cada visita, es un privilegio.</p>
+        <p class="footer-about">Tradición orfebre y atención personalizada en el corazón de Granada. Cada pieza, cada visita, es un privilegio.</p>
         <a href="https://maps.google.com/?q=C.+Pedro+Antonio+de+Alarcon,+45,+Granada" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
           <svg width="12" height="13" viewBox="0 0 12 13" fill="none" aria-hidden="true">
             <circle cx="6" cy="4.5" r="2" stroke="currentColor" stroke-width="1"/>
@@ -2427,7 +2364,7 @@
           <li><a href="#servicios">Reparación de Joyas</a></li>
           <li><a href="#servicios">Reparación de Relojes</a></li>
           <li><a href="#servicios">Restauración</a></li>
-          <li><a href="#servicios">Tasación Oficial</a></li>
+          <li><a href="#servicios">Tasación</a></li>
         </ul>
       </div>
 
@@ -2437,6 +2374,7 @@
         <ul class="footer-links">
           <li><a href="#relojeria">Alta Relojería</a></li>
           <li><a href="#historia">Nuestra Historia</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
           <li><a href="#cita">Reservar Cita</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -2451,9 +2389,9 @@
     <div class="footer-bottom">
       <p class="footer-copy">© <span id="year">2026</span> Joyería Relojería Nell · Granada · Todos los derechos reservados</p>
       <nav class="footer-legal" aria-label="Información legal">
-        <a href="aviso-legal.html">Aviso legal</a>
-        <a href="privacidad.html">Política de privacidad</a>
-        <a href="cookies.html">Política de cookies</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/privacidad">Política de privacidad</a>
+        <a href="/cookies">Política de cookies</a>
       </nav>
       <button type="button" class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
         Volver arriba
@@ -2554,37 +2492,6 @@
   document.querySelectorAll('.svc-card').forEach(function(el) {
     svcObserver.observe(el);
   });
-
-  /* ── Testimonials (el contenido está en el HTML) ── */
-  var slides    = document.querySelectorAll('.testi-slide');
-  var testiDots = document.querySelectorAll('#testi-dots .dot');
-  var testiWrap = document.querySelector('.testimonial-wrap');
-  var currentT  = 0;
-  var paused    = false;
-
-  function showTestimonial(i) {
-    var old = slides[currentT];
-    old.classList.add('fading');
-    setTimeout(function() {
-      old.classList.remove('active', 'fading');
-      currentT = i;
-      slides[currentT].classList.add('active');
-    }, 350);
-    testiDots.forEach(function(d, j) {
-      d.classList.toggle('active', j === i);
-      if (j === i) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
-    });
-  }
-  window.changeT = function(dir) { showTestimonial((currentT + dir + slides.length) % slides.length); };
-  window.goT     = function(i)   { if (i !== currentT) showTestimonial(i); };
-
-  /* Cambio automático cada 6 s: se para con el ratón encima o con el foco dentro,
-     y no se activa si el usuario prefiere menos movimiento */
-  ['mouseenter', 'focusin'].forEach(function(ev) { testiWrap.addEventListener(ev, function() { paused = true; }); });
-  ['mouseleave', 'focusout'].forEach(function(ev) { testiWrap.addEventListener(ev, function() { paused = false; }); });
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    setInterval(function() { if (!paused && !document.hidden) changeT(1); }, 6000);
-  }
 
   /* ── Mapa: se carga al pulsar «Ver mapa aquí» ── */
   var mapWrap = document.getElementById('map-wrap');
