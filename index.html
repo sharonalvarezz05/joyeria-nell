@@ -1635,6 +1635,17 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
     }
+
+    /* ── Contraste (WCAG 2.1 AA, mínimo 4,5:1 en texto normal) ──
+       El gris --stone (#7A7065) da 3,6–4,1:1 sobre los fondos negros: no llega.
+       En las secciones oscuras se sustituye por #A09590 (6,0–6,9:1). Sobre crema sigue
+       usándose #7A7065 (4,57:1), y la lista de servicios pasa a ese gris porque
+       #A09590 sobre crema solo da 2,75:1. */
+    #hero, #relojeria, #historia, #cita, #mobile-menu, .map-wrap, footer { --stone: #A09590; }
+    .svc-list li { color: var(--stone); }
+    /* Textos del pie demasiado pequeños (8–9,6 px) */
+    .footer-col-title { font-size: .65rem; }
+    .footer-copy, .footer-legal a, .back-top { font-size: .7rem; }
   </style>
 </head>
 <body>
@@ -1747,8 +1758,8 @@
 
 
 <!-- ══════════ COLLECTIONS ══════════ -->
-<!-- FOTOS: todas son de stock (Unsplash) y llevan alt="" mientras tanto. Sustituir por fotos reales
-     y poner el alt propuesto en PENDIENTES-CLIENTE.md -->
+<!-- FOTOS: de stock (Unsplash), sin repetir y sin logotipos de marcas legibles.
+     Con un cliente real se sustituirían por fotos propias de la tienda y sus piezas. -->
 <section id="colecciones" class="section-pad">
   <div class="container">
 
@@ -1772,7 +1783,7 @@
 
       <article class="coll-card reveal">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80&fit=crop" alt="Anillo de compromiso de oro blanco con diamante central y orla de oro rosa sobre fondo negro" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <span class="coll-badge">Más solicitado</span>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
@@ -1788,7 +1799,7 @@
 
       <article class="coll-card reveal d1">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80&fit=crop" alt="Dos collares dorados superpuestos, uno con colgante de piedra azul y otro con media luna de brillantes" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
         </div>
@@ -1803,7 +1814,7 @@
 
       <article class="coll-card reveal d2">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&q=80&fit=crop" alt="Pendientes de oro en forma de flor con piedra central y orla de circonitas" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
         </div>
@@ -1818,7 +1829,7 @@
 
       <article class="coll-card reveal d3">
         <div class="coll-img-wrap">
-          <img src="https://images.unsplash.com/photo-1617191880362-aac615de3c26?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1617191880362-aac615de3c26?w=600&q=80&fit=crop" alt="Brazaletes dorados con engastes de piedras rojas" loading="lazy" />
           <div class="coll-overlay" aria-hidden="true"></div>
           <span class="coll-badge">Nueva colección</span>
           <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
@@ -1872,7 +1883,7 @@
 
       <div class="watch-card reveal">
         <div class="watch-img-wrap">
-          <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=900&q=80&fit=crop" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1618337978865-f02783a02355?w=900&q=80&fit=crop" alt="Reloj de esfera negra con caja dorada y correa de malla en una muñeca" loading="lazy" />
           <div class="watch-img-overlay" aria-hidden="true"></div>
         </div>
         <div class="watch-body">
@@ -1891,7 +1902,7 @@
 
       <div class="watch-card reverse reveal d1">
         <div class="watch-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&q=80&fit=crop" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1717157197005-b851de4abc63?w=900&q=80&fit=crop" alt="Reloj clásico de esfera plateada con correa de piel negra sobre un cojín de ante" loading="lazy" />
           <div class="watch-img-overlay" aria-hidden="true"></div>
         </div>
         <div class="watch-body">
@@ -2033,7 +2044,7 @@
       <!-- Image (first in DOM → visible on mobile before text) -->
       <div class="heritage-img-wrap reveal d1">
         <div class="heritage-img">
-          <img src="https://images.unsplash.com/photo-1655111396188-8dd88ceb8b4d?w=700&q=80&fit=crop" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1655111396188-8dd88ceb8b4d?w=700&q=80&fit=crop" alt="Orfebre soldando una pieza con un soplete en el banco de trabajo del taller" loading="lazy" />
         </div>
         <div class="heritage-deco-br" aria-hidden="true"></div>
         <div class="heritage-deco-tl" aria-hidden="true"></div>
@@ -2594,3 +2605,4 @@
 </script>
 </body>
 </html>
+
