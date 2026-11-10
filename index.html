@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyería Relojería Nell — Granada</title>
+  <meta name="description" content="Joyería y relojería de alta gama en el corazón de Granada. Colecciones exclusivas, relojes de precisión y servicio experto de reparación. C. Pedro Antonio de Alarcón, 45." />
+  <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <!-- Marca que el JavaScript está activo: sin él, todo el contenido se ve sin animaciones -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!--
+    DATOS ESTRUCTURADOS LocalBusiness (JewelryStore) — DESACTIVADOS.
+    No se ha podido confirmar que el negocio exista con estos datos (ver PENDIENTES-CLIENTE.md).
+    Para activarlos: corregir los datos con el cliente, quitar las marcas de comentario
+    (borrar las dos líneas que contienen la palabra ACTIVAR) y validar en https://search.google.com/test/rich-results
+  -->
+  <!-- ACTIVAR
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "Joyería Relojería Nell",
+    "description": "Joyería y relojería en Granada: joyas, relojes, reparación, restauración y tasación.",
+    "url": "https://DOMINIO-PENDIENTE/",
+    "telephone": "+34958267401",
+    "foundingDate": "1985",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Pedro Antonio de Alarcón, 45",
+      "postalCode": "18002",
+      "addressLocality": "Granada",
+      "addressRegion": "Granada",
+      "addressCountry": "ES"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
+    ],
+    "hasMap": "ENLACE-FICHA-GOOGLE-PENDIENTE",
+    "sameAs": ["ENLACE-FICHA-GOOGLE-PENDIENTE"]
+  }
+  </script>
+  ACTIVAR -->
+  <style>
+    /* ══════════════════════════════
+       FUENTES (alojadas en /fonts, sin llamadas a Google)
+    ══════════════════════════════ */
+    @font-face { font-family:'Cormorant Garamond'; font-style:normal; font-weight:300 600; font-display:swap; src:url('fonts/cormorant-garamond.woff2') format('woff2'); }
+    @font-face { font-family:'Cormorant Garamond'; font-style:italic; font-weight:300 500; font-display:swap; src:url('fonts/cormorant-garamond-italic.woff2') format('woff2'); }
+    @font-face { font-family:'Inter'; font-style:normal; font-weight:300 500; font-display:swap; src:url('fonts/inter.woff2') format('woff2'); }
+
+    /* ══════════════════════════════
+       RESET & BASE
+    ══════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --noir:        #080808;
+      --charcoal:    #111111;
+      --charcoal2:   #1A1A1A;
+      --ivory:       #F7F3EB;
+      --cream:       #FAF8F5;
+      --stone:       #7A7065;
+      --stone-light: #A09590;
+      --gold:        #B8965A;
+      --gold-light:  #C9A96E;
+      --gold-deep:   #8B6E3A;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noir);
+      color: var(--ivory);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--gold); color: var(--noir); }
+    ::-webkit-scrollbar { width: 1px; }
+    ::-webkit-scrollbar-track { background: var(--noir); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-deep); }
+
+    /* All images fill their container */
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a   { text-decoration: none; color: inherit; }
+    button { font-family: inherit; }
+
+    /* ══════════════════════════════
+       LAYOUT UTILITIES
+    ══════════════════════════════ */
+    .section-pad { padding: 6rem 0; }
+    @media(min-width:768px)  { .section-pad { padding: 8rem 0; } }
+    @media(min-width:1024px) { .section-pad { padding: 10rem 0; } }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    @media(min-width:640px)  { .container { padding: 0 2rem; } }
+    @media(min-width:768px)  { .container { padding: 0 2.5rem; } }
+    @media(min-width:1024px) { .container { padding: 0 4rem; } }
+
+    /* ══════════════════════════════
+       COMMON COMPONENTS
+    ══════════════════════════════ */
+
+    /* Eyebrow label */
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .eyebrow-line { width: 2rem; height: 1px; flex-shrink: 0; background: var(--gold); }
+    .eyebrow-line.dark { background: var(--gold-deep); }
+    .eyebrow-text {
+      font-size: .625rem;
+      letter-spacing: .4em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    /* Section titles */
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      line-height: 1.1;
+      color: var(--ivory);
+    }
+    .section-title.on-light  { color: var(--charcoal); }
+    .section-title em        { font-style: italic; color: var(--gold); }
+    .section-title.on-light em { color: var(--gold-deep); }
+
+    /* Section intro two-column header */
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    @media(min-width:1024px) {
+      .section-header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 4rem;
+      }
+    }
+    .section-header-text {
+      font-size: .8125rem;
+      line-height: 1.85;
+      color: var(--stone);
+      max-width: 20rem;
+    }
+
+    /* Gold rule — animated on scroll via JS */
+    .gold-rule {
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+      margin: 2.5rem 0 3.5rem;
+      transform-origin: left;
+      transition: transform 1.2s cubic-bezier(.22,1,.36,1);
+    }
+    .gold-rule.w-short { width: 3rem; }
+    .gold-rule.w-med   { width: 6rem; }
+    .js .gold-rule:not(.animated) { transform: scaleX(0); }
+
+    /* Texto solo para lectores de pantalla */
+    .visually-hidden { position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+    /* Scroll reveal */
+    /* Solo se ocultan si hay JavaScript para mostrarlos */
+    .js .reveal:not(.visible) { opacity: 0; transform: translateY(36px); }
+    .reveal {
+      transition: opacity .9s cubic-bezier(.22,1,.36,1),
+                  transform .9s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.d1 { transition-delay: .1s; }
+    .reveal.d2 { transition-delay: .2s; }
+    .reveal.d3 { transition-delay: .3s; }
+    .reveal.d4 { transition-delay: .4s; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      padding: .9rem 2.25rem;
+      background: var(--gold);
+      color: var(--noir);
+      font-family: 'Inter', sans-serif;
+      font-size: .625rem;
+      font-weight: 500;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      transition: background .5s, letter-spacing .5s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--gold-light); letter-spacing: .35em; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      padding: .9rem 2.25rem;
+      border: 1px solid rgba(247,243,235,.3);
+      color: var(--ivory);
+      font-family: 'Inter', sans-serif;
+      font-size: .625rem;
+      font-weight: 300;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      transition: border-color .5s, color .5s;
+      white-space: nowrap;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Arrow link */
+    .link-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .625rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      padding-bottom: .25rem;
+      border-bottom: 1px solid rgba(139,110,58,.3);
+      transition: border-color .4s, gap .4s;
+    }
+    .link-arrow:hover { border-color: var(--gold-deep); gap: 1rem; }
+
+    /* ══════════════════════════════
+       NAVBAR
+    ══════════════════════════════ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      transition: background .7s, border-color .7s;
+      border-bottom: 1px solid transparent;
+    }
+    #navbar.scrolled {
+      background: rgba(8,8,8,.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-color: rgba(255,255,255,.05);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 5rem;
+    }
+    @media(min-width:768px) { .nav-inner { height: 6rem; } }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+      gap: 3px;
+    }
+    .nav-logo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: .22em;
+      color: var(--ivory);
+    }
+    .nav-logo-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+    }
+
+    .nav-links {
+      display: none;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    @media(min-width:1024px) { .nav-links { display: flex; } }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: .625rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      transition: color .3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width .4s cubic-bezier(.22,1,.36,1);
+    }
+    .nav-links a:hover { color: var(--ivory); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      display: none;
+      align-items: center;
+      padding: .7rem 1.6rem;
+      border: 1px solid rgba(184,150,90,.35);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      transition: background .4s, color .4s, border-color .4s;
+    }
+    @media(min-width:768px) { .nav-cta { display: inline-flex; } }
+    .nav-cta:hover { background: var(--gold); color: var(--noir); border-color: var(--gold); }
+
+    /* Hamburger */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: .5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    @media(min-width:1024px) { .hamburger { display: none; } }
+    .hamburger span {
+      display: block;
+      width: 1.5rem;
+      height: 1px;
+      background: var(--ivory);
+      transition: transform .35s cubic-bezier(.22,1,.36,1), opacity .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* Mobile fullscreen menu */
+    #mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 95;
+      background: var(--noir);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      transform: translateX(100%);
+      transition: transform .55s cubic-bezier(.22,1,.36,1);
+    }
+    #mobile-menu.open { transform: translateX(0); }
+    #mobile-menu::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,150,90,.3), transparent);
+    }
+    .mobile-menu-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.25rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ivory);
+      transition: color .3s;
+    }
+    .mobile-menu-link:hover,
+    .mobile-menu-link:active { color: var(--gold); }
+    .mobile-menu-cta {
+      margin-top: .5rem;
+      padding: .9rem 2.5rem;
+      border: 1px solid rgba(184,150,90,.45);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      transition: background .4s, color .4s;
+    }
+    .mobile-menu-cta:hover { background: var(--gold); color: var(--noir); }
+    .mobile-menu-addr {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 0; right: 0;
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--stone);
+      text-align: center;
+      line-height: 2.2;
+      padding: 0 2rem;
+    }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      min-height: 100vh; /* fallback */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 62% 38%, rgba(184,150,90,.07) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 70% at 18% 80%, rgba(184,150,90,.04) 0%, transparent 60%),
+        linear-gradient(170deg, #0E0E0E 0%, #080808 55%, #040404 100%);
+    }
+    .hero-line {
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 1px;
+      pointer-events: none;
+    }
+    .hero-line-l {
+      left: clamp(1.5rem, 8%, 6rem);
+      background: linear-gradient(to bottom, transparent 5%, rgba(184,150,90,.1) 50%, transparent 95%);
+    }
+    .hero-line-r {
+      right: clamp(1.5rem, 8%, 6rem);
+      background: linear-gradient(to bottom, transparent 5%, rgba(184,150,90,.07) 50%, transparent 95%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-top: 9rem;
+      padding-bottom: 7rem;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: anim-fade-up .8s cubic-bezier(.22,1,.36,1) .4s forwards;
+    }
+    .hero-eyebrow-line { width: 2rem; height: 1px; background: var(--gold); flex-shrink: 0; }
+    .hero-eyebrow-text {
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .45em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+    }
+
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.6rem, 7.4vw, 7rem);
+      line-height: 1;
+      color: var(--ivory);
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+    .hero-h1-line {
+      display: block;
+      overflow: hidden;
+    }
+    .hero-h1-inner {
+      display: block;
+      transform: translateY(110%);
+      animation: anim-slide-up 1.1s cubic-bezier(.22,1,.36,1) forwards;
+    }
+    .hero-h1-line:nth-child(1) .hero-h1-inner { animation-delay: .65s; }
+    .hero-h1-line:nth-child(2) .hero-h1-inner { animation-delay: .82s; }
+
+    .hero-h1-flex {
+      display: flex;
+      align-items: baseline;
+      gap: clamp(.75rem, 2vw, 1.5rem);
+    }
+    .hero-h1-gold {
+      font-style: italic;
+      background: linear-gradient(125deg, #D4B47A 0%, #B8965A 45%, #9A7840 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-divider {
+      width: clamp(12rem, 35vw, 28rem);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(184,150,90,.55) 0%, rgba(184,150,90,.1) 100%);
+      margin: 2.5rem 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: anim-grow 1.4s cubic-bezier(.22,1,.36,1) 1.15s forwards;
+    }
+
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1.125rem, 2.2vw, 1.625rem);
+      color: var(--stone-light);
+      max-width: 28rem;
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: anim-fade-up .9s cubic-bezier(.22,1,.36,1) 1.35s forwards;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-direction: column;
+      gap: .875rem;
+      opacity: 0;
+      animation: anim-fade-up .9s cubic-bezier(.22,1,.36,1) 1.55s forwards;
+    }
+    @media(min-width:480px) { .hero-btns { flex-direction: row; } }
+
+    .hero-addr {
+      display: flex;
+      align-items: center;
+      gap: .875rem;
+      margin-top: 3.5rem;
+      opacity: 0;
+      animation: anim-fade-up 1s cubic-bezier(.22,1,.36,1) 1.85s forwards;
+    }
+    .hero-addr svg { color: var(--gold); flex-shrink: 0; }
+    .hero-addr-text {
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    /* Scroll cue */
+    .scroll-cue {
+      position: absolute;
+      bottom: 2.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .625rem;
+      cursor: pointer;
+      border: none;
+      background: none;
+      opacity: 0;
+      animation: anim-fade-up 1s cubic-bezier(.22,1,.36,1) 2.1s forwards;
+    }
+    .scroll-cue-text {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--stone);
+      transition: color .3s;
+    }
+    .scroll-cue:hover .scroll-cue-text { color: var(--gold); }
+    .scroll-cue-bar {
+      width: 1px;
+      height: 2.25rem;
+      background: linear-gradient(to bottom, rgba(184,150,90,.55), transparent);
+      animation: anim-pulse-y 2.2s ease-in-out infinite;
+    }
+
+    /* Top-right phone (desktop only) */
+    .hero-contact-hint {
+      position: absolute;
+      top: 7.5rem;
+      right: clamp(1.5rem, 4%, 4rem);
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: .3rem;
+      opacity: 0;
+      animation: anim-fade-up 1s cubic-bezier(.22,1,.36,1) 1.9s forwards;
+    }
+    @media(min-width:1024px) { .hero-contact-hint { display: flex; } }
+    .hero-contact-text {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .hero-contact-line { width: 1.5rem; height: 1px; background: rgba(184,150,90,.35); }
+
+    /* Keyframes */
+    @keyframes anim-fade-up  { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes anim-slide-up { from { transform:translateY(110%); } to { transform:translateY(0); } }
+    @keyframes anim-grow     { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+    @keyframes anim-pulse-y  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
+
+    /* ══════════════════════════════
+       COLLECTIONS
+    ══════════════════════════════ */
+    #colecciones { background: var(--cream); }
+
+    .coll-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media(min-width:580px) { .coll-grid { grid-template-columns: 1fr 1fr; } }
+    @media(min-width:1024px){ .coll-grid { grid-template-columns: repeat(4,1fr); gap: 1.25rem; } }
+
+    .coll-card { display: flex; flex-direction: column; }
+
+    /* Image container */
+    .coll-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: var(--charcoal2);
+    }
+    .coll-img-wrap img {
+      transition: transform 1s cubic-bezier(.22,1,.36,1);
+    }
+    .coll-card:hover .coll-img-wrap img { transform: scale(1.06); }
+
+    .coll-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,.75) 0%, rgba(8,8,8,.08) 55%, transparent 100%);
+      transition: opacity .5s;
+    }
+    .coll-card:hover .coll-overlay { opacity: .55; }
+
+    .coll-explore {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .45s cubic-bezier(.22,1,.36,1);
+      z-index: 2;
+    }
+    .coll-card:hover .coll-explore { opacity: 1; }
+    .coll-explore span {
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--ivory);
+      border: 1px solid rgba(247,243,235,.55);
+      padding: .65rem 1.4rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .coll-badge {
+      position: absolute;
+      top: 1.1rem;
+      left: 1.1rem;
+      z-index: 2;
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--noir);
+      padding: .3rem .7rem;
+    }
+
+    .coll-body { padding: 1.25rem 0 1.75rem; }
+    .coll-body-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: .625rem;
+    }
+    .coll-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      transition: color .35s;
+    }
+    .coll-card:hover .coll-name { color: var(--gold-deep); }
+    .coll-accent-line {
+      height: 1px;
+      width: 1.5rem;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .coll-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: .75rem;
+      line-height: 1.75;
+      color: var(--stone);
+    }
+
+    .coll-footer {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .coll-footer p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.375rem;
+      color: var(--stone);
+      margin-bottom: 1.75rem;
+    }
+
+    /* ══════════════════════════════
+       WATCHES
+    ══════════════════════════════ */
+    #relojeria { background: var(--noir); }
+
+    .watch-cards { display: flex; flex-direction: column; gap: 4px; margin-bottom: 6rem; }
+
+    .watch-card {
+      display: flex;
+      flex-direction: column;
+    }
+    @media(min-width:1024px) {
+      .watch-card         { flex-direction: row; }
+      .watch-card.reverse { flex-direction: row-reverse; }
+    }
+
+    .watch-img-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      background: var(--charcoal2);
+    }
+    @media(min-width:1024px) { .watch-img-wrap { min-height: 500px; } }
+    .watch-img-wrap img {
+      transition: transform 1.1s cubic-bezier(.22,1,.36,1);
+    }
+    .watch-card:hover .watch-img-wrap img { transform: scale(1.04); }
+    .watch-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8,8,8,.18);
+      transition: background .7s;
+    }
+    .watch-card:hover .watch-img-overlay { background: rgba(8,8,8,.08); }
+
+    .watch-body {
+      flex: 1;
+      background: var(--charcoal2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2.5rem 2rem;
+    }
+    @media(min-width:768px)  { .watch-body { padding: 3rem 2.5rem; } }
+    @media(min-width:1024px) { .watch-body { padding: 3.5rem 3.5rem 3.5rem 4rem; } }
+    .watch-card.reverse .watch-body {
+      padding: 2.5rem 2rem;
+    }
+    @media(min-width:1024px) { .watch-card.reverse .watch-body { padding: 3.5rem 4rem 3.5rem 3.5rem; } }
+
+    .watch-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .watch-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(1.75rem, 3vw, 2.75rem);
+      color: var(--ivory);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    .watch-rule { width: 2rem; height: 1px; background: var(--gold); margin-bottom: 1.75rem; }
+    .watch-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      line-height: 1.85;
+      color: var(--stone-light);
+      max-width: 22rem;
+    }
+    .watch-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      margin-top: 2.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: color .3s, gap .35s;
+    }
+    .watch-cta:hover { color: var(--gold-light); gap: 1rem; }
+
+    /* Brand grid */
+    .brands-section { border-top: 1px solid rgba(255,255,255,.05); padding-top: 4rem; }
+    .brands-label {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: var(--stone);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 1px;
+      background: rgba(255,255,255,.04);
+    }
+    @media(min-width:580px) { .brands-grid { grid-template-columns: repeat(3,1fr); } }
+    @media(min-width:1024px){ .brands-grid { grid-template-columns: repeat(6,1fr); } }
+    .brand-cell {
+      background: var(--charcoal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      text-align: center;
+      transition: background .45s;
+    }
+    .brand-cell:hover { background: var(--charcoal2); }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.125rem;
+      font-weight: 300;
+      letter-spacing: .12em;
+      color: var(--ivory);
+      margin-bottom: .3rem;
+      transition: color .3s;
+    }
+    .brand-cell:hover .brand-name { color: var(--gold); }
+    .brand-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      line-height: 1.5;
+      transition: color .3s;
+    }
+    .brand-cell:hover .brand-desc { color: var(--stone-light); }
+
+    /* ══════════════════════════════
+       SERVICES
+    ══════════════════════════════ */
+    #servicios { background: var(--cream); }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    @media(min-width:580px)  { .svc-grid { grid-template-columns: 1fr 1fr; } }
+    @media(min-width:1024px) { .svc-grid { grid-template-columns: repeat(4,1fr); } }
+
+    .svc-card {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid rgba(26,26,26,.2);
+      padding: 2.5rem 1.5rem 2.5rem 0;
+      position: relative;
+    }
+    @media(min-width:580px) { .svc-card { padding-right: 1.5rem; } }
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: 0;
+      height: 1px;
+      width: 0;
+      background: var(--gold);
+      transition: width .55s cubic-bezier(.22,1,.36,1);
+    }
+    .svc-card:hover::before { width: 100%; }
+
+    .svc-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4rem, 8vw, 7rem);
+      font-weight: 300;
+      line-height: 1;
+      color: rgba(139,110,58,.13);
+      letter-spacing: -.02em;
+      margin-bottom: .5rem;
+      user-select: none;
+    }
+    .svc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      margin-bottom: .75rem;
+      transition: color .3s;
+    }
+    .svc-card:hover .svc-title { color: var(--gold-deep); }
+
+    .svc-rule {
+      width: 2rem;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 1.25rem;
+      transition: width .9s cubic-bezier(.22,1,.36,1);
+    }
+    .js .svc-card:not(.line-visible) .svc-rule { width: 0; }
+
+    .svc-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: .775rem;
+      line-height: 1.8;
+      color: var(--stone);
+      margin-bottom: 1.75rem;
+    }
+    .svc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-top: auto;
+    }
+    .svc-list li {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .6875rem;
+      color: var(--stone-light);
+    }
+    .svc-dot {
+      width: .2rem;
+      height: .2rem;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .svc-banner {
+      margin-top: 4.5rem;
+      border: 1px dashed rgba(184,150,90,.22);
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    @media(min-width:768px) { .svc-banner { flex-direction: row; align-items: center; } }
+    .svc-banner-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      margin-bottom: .4rem;
+    }
+    .svc-banner-text p {
+      font-family: 'Inter', sans-serif;
+      font-size: .75rem;
+      color: var(--stone);
+      line-height: 1.7;
+    }
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .9rem 1.75rem;
+      border: 1px solid rgba(139,110,58,.35);
+      color: var(--gold-deep);
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background .45s, color .45s, border-color .45s;
+    }
+    .btn-call:hover { background: var(--gold); color: var(--noir); border-color: var(--gold); }
+
+    /* ══════════════════════════════
+       HERITAGE
+    ══════════════════════════════ */
+    #historia { background: var(--noir); }
+
+    .heritage-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      margin-bottom: 6rem;
+      align-items: center;
+    }
+    @media(min-width:1024px) {
+      .heritage-grid { grid-template-columns: 1fr 1fr; gap: 5rem; }
+      .heritage-img-wrap  { order: 2; }
+      .heritage-text-col  { order: 1; }
+    }
+
+    .heritage-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      line-height: 1.1;
+      color: var(--ivory);
+      margin-bottom: 2rem;
+    }
+    .heritage-title em { font-style: italic; color: var(--gold); }
+    .heritage-rule { width: 2.5rem; height: 1px; background: var(--gold); margin-bottom: 2.25rem; }
+
+    .heritage-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      line-height: 1.95;
+      color: var(--stone-light);
+      margin-bottom: 3rem;
+    }
+    .heritage-values { display: flex; flex-direction: column; gap: 1.75rem; }
+    .heritage-value { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .heritage-value-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.75rem;
+      color: rgba(184,150,90,.38);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 1.75rem;
+      text-align: right;
+    }
+    .heritage-value-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--ivory);
+      margin-bottom: .2rem;
+    }
+    .heritage-value-body p {
+      font-family: 'Inter', sans-serif;
+      font-size: .725rem;
+      color: var(--stone);
+      line-height: 1.7;
+    }
+
+    /* Heritage image with decorative frames */
+    .heritage-img-wrap {
+      position: relative;
+      /* Prevent frames from causing horizontal overflow */
+      padding: 1.75rem 1.75rem 1.75rem 0;
+    }
+    @media(min-width:1024px) { .heritage-img-wrap { padding: 1.75rem; } }
+    .heritage-img {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+    }
+    .heritage-img img { transition: transform 1.1s cubic-bezier(.22,1,.36,1); }
+    .heritage-img-wrap:hover .heritage-img img { transform: scale(1.03); }
+    .heritage-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,.38), transparent 55%);
+    }
+    .heritage-deco-br {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 5rem; height: 5rem;
+      border-right: 1px solid rgba(184,150,90,.2);
+      border-bottom: 1px solid rgba(184,150,90,.2);
+    }
+    .heritage-deco-tl {
+      position: absolute;
+      top: 0; left: 0;
+      width: 4rem; height: 4rem;
+      border-left: 1px solid rgba(184,150,90,.12);
+      border-top: 1px solid rgba(184,150,90,.12);
+    }
+
+    /* Timeline */
+    .timeline { border-top: 1px solid rgba(255,255,255,.05); padding-top: 3.5rem; }
+    .timeline-label {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: var(--stone);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,.04);
+    }
+    @media(min-width:1024px) { .timeline-grid { grid-template-columns: repeat(4,1fr); } }
+    .timeline-cell {
+      background: var(--charcoal);
+      padding: 2.25rem 1.5rem;
+      text-align: center;
+      transition: background .45s;
+    }
+    .timeline-cell:hover { background: var(--charcoal2); }
+    .timeline-year {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.25rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: .65rem;
+      transition: color .3s;
+    }
+    .timeline-cell:hover .timeline-year { color: var(--gold-light); }
+    .timeline-event {
+      font-family: 'Inter', sans-serif;
+      font-size: .65rem;
+      line-height: 1.55;
+      color: var(--stone-light);
+    }
+
+    /* ══════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════ */
+    #testimonios { background: var(--cream); }
+
+    .testimonial-wrap { max-width: 54rem; }
+    .big-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(5rem, 10vw, 7.5rem);
+      line-height: 1;
+      color: rgba(184,150,90,.14);
+      user-select: none;
+      margin-bottom: .5rem;
+      margin-left: -.5rem;
+    }
+    .testimonial-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      line-height: 1.65;
+      color: var(--charcoal);
+      min-height: 8.5rem;
+      margin-bottom: 2.25rem;
+      transition: opacity .35s ease;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      transition: opacity .35s ease;
+    }
+    .author-rule { width: 2rem; height: 1px; background: var(--gold); flex-shrink: 0; }
+    .author-name {
+      font-family: 'Inter', sans-serif;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      color: var(--charcoal);
+    }
+    .author-ctx {
+      font-family: 'Inter', sans-serif;
+      font-size: .6rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: .25rem;
+    }
+    .testi-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      margin-top: 3.5rem;
+    }
+    .testi-btn {
+      width: 2.75rem; height: 2.75rem;
+      border: 1px solid rgba(26,26,26,.25);
+      background: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color .3s;
+    }
+    .testi-btn:hover { border-color: var(--gold); }
+    .dots { display: flex; gap: .5rem; align-items: center; }
+    .dot {
+      height: 1px;
+      padding: .6rem 0;           /* zona de clic más grande */
+      background: rgba(26,26,26,.25);
+      background-clip: content-box;
+      border: 0;
+      box-sizing: content-box;
+      cursor: pointer;
+      transition: width .4s, background .4s;
+      width: .5rem;
+    }
+    .dot.active { width: 1.75rem; background-color: var(--gold); }
+
+    .rating-strip {
+      margin-top: 5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(26,26,26,.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .65rem;
+      text-align: center;
+    }
+    .stars-row { display: flex; gap: .3rem; }
+    .rating-text {
+      font-family: 'Inter', sans-serif;
+      font-size: .7rem;
+      letter-spacing: .04em;
+      color: var(--stone);
+    }
+    .rating-text strong { color: var(--charcoal); font-weight: 500; }
+    .rating-link { display: flex; flex-direction: column; align-items: center; gap: .65rem; }
+    .rating-link:hover .rating-text, .rating-link:focus-visible .rating-text { color: var(--gold-deep); }
+    .rating-link .rating-text span { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Testimonios: sin JS se ven todos; con JS, uno cada vez */
+    .testi-slide { transition: opacity .35s ease; }
+    .testi-slide .testimonial-author { margin-bottom: 0; }
+    html:not(.js) .testi-slide + .testi-slide { margin-top: 3.5rem; }
+    html:not(.js) .testi-nav { display: none; }
+    .js .testi-slide:not(.active) { display: none; }
+    .testi-slide.fading { opacity: 0; }
+
+    /* ══════════════════════════════
+       APPOINTMENT
+    ══════════════════════════════ */
+    #cita {
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 0 10rem;
+      background:
+        radial-gradient(ellipse 85% 65% at 50% 50%, rgba(184,150,90,.09) 0%, transparent 70%),
+        linear-gradient(180deg, #0A0A0A 0%, #0C0906 50%, #0A0A0A 100%);
+    }
+    #cita::before,
+    #cita::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,150,90,.28), transparent);
+    }
+    #cita::before { top: 0; }
+    #cita::after  { bottom: 0; }
+
+    .cita-eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 2.25rem;
+    }
+    .cita-eyebrow-line { width: 2rem; height: 1px; background: var(--gold); }
+    .cita-eyebrow-text {
+      font-family: 'Inter', sans-serif;
+      font-size: .5625rem;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+    }
+
+    .cita-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+      line-height: 1.1;
+      color: var(--ivory);
+      max-width: 48rem;
+      margin: 0 auto 1.75rem;
+      text-align: center;
+    }
+    .cita-title em { font-style: italic; color: var(--gold); }
+    .cita-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: .8375rem;
+      line-height: 1.85;
+      color: var(--stone-light);
+      max-width: 30rem;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+    }
+    .cita-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .875rem;
+      justify-content: center;
+      margin-bottom: 3.5rem;
+    }
+    @media(min-width:480px) { .cita-btns { flex-direction: row; } }
+
+    .hours-box {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      border: 1px solid rgba(255,255,255,.06);
+      padding: 1.75rem 2rem;
+    }
+    @media(min-width:600px) {
+      .hours-box { flex-direction: row; align-items: center; gap: 2.5rem; }
+    }
+    .hour-block { text-align: center; }
+    .hour-label {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: .4rem;
+    }
+    .hour-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--ivory);
+    }
+    .hour-val.closed { color: var(--stone-light); font-style: italic; }
+    .hour-sep {
+      width: 1px;
+      height: 2rem;
+      background: rgba(255,255,255,.08);
+      display: none;
+    }
+    @media(min-width:600px) { .hour-sep { display: block; } }
+
+    /* ══════════════════════════════
+       CONTACT
+    ══════════════════════════════ */
+    #contacto { background: var(--cream); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media(min-width:1024px) { .contact-grid { grid-template-columns: 1fr 1fr; align-items: stretch; } }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+
+    .contact-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .contact-icon {
+      width: 2.75rem; height: 2.75rem;
+      border: 1px solid rgba(26,26,26,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--stone);
+      transition: border-color .4s, color .4s;
+    }
+    .contact-item:hover .contact-icon { border-color: var(--gold); color: var(--gold); }
+    .contact-label {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: .4rem;
+    }
+    .contact-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      display: block;
+      transition: color .3s;
+    }
+    a.contact-val:hover { color: var(--gold-deep); }
+    .contact-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: .675rem;
+      color: var(--stone);
+      margin-top: .2rem;
+    }
+
+    .contact-sep { height: 1px; background: rgba(26,26,26,.12); margin: .5rem 0; }
+
+    .contact-note {
+      background: var(--cream);
+      border: 1px solid rgba(26,26,26,.15);
+      padding: 1.75rem;
+    }
+    .contact-note h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      margin-bottom: .4rem;
+    }
+    .contact-note p {
+      font-family: 'Inter', sans-serif;
+      font-size: .725rem;
+      color: var(--stone);
+      line-height: 1.75;
+      margin-bottom: 1.1rem;
+    }
+
+    /* Map */
+    .map-wrap {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+      background: var(--charcoal2);
+    }
+    @media(min-width:1024px) { .map-wrap { min-height: 100%; } }
+    .map-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(1) contrast(1.05) brightness(.88);
+      transition: filter .8s ease;
+    }
+    .map-wrap:hover iframe { filter: grayscale(.25) contrast(1) brightness(.95); }
+    /* Mapa: se carga solo si el visitante lo pide (sin cookies de Google hasta entonces) */
+    .map-placeholder {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.1rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 40%, rgba(184,150,90,.08) 0%, transparent 70%),
+        var(--charcoal2);
+    }
+    .map-ph-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--ivory);
+    }
+    .map-ph-addr { font-size: .75rem; color: var(--stone-light); line-height: 1.7; }
+    .map-ph-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: .4rem; }
+    .map-ph-btns .btn-primary, .map-ph-btns .btn-outline { cursor: pointer; }
+    button.btn-outline { background: transparent; }
+    html:not(.js) .map-load { display: none; }
+    .map-ph-note { font-size: .65rem; color: var(--stone); max-width: 22rem; line-height: 1.7; }
+    .map-ph-note a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    .map-wrap.loaded .map-placeholder { display: none; }
+    .map-border {
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(26,26,26,.25);
+      pointer-events: none;
+      z-index: 2;
+      transition: border-color .5s;
+    }
+    .map-wrap:hover .map-border { border-color: rgba(184,150,90,.18); }
+    .map-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(8,8,8,.65), transparent);
+      padding: 1.5rem 1.25rem .875rem;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .map-caption p:first-child {
+      font-family: 'Inter', sans-serif;
+      font-size: .55rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: rgba(247,243,235,.85);
+    }
+    .map-caption p:last-child {
+      font-family: 'Inter', sans-serif;
+      font-size: .55rem;
+      color: rgba(247,243,235,.5);
+      margin-top: .25rem;
+    }
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    footer {
+      background: var(--charcoal);
+      border-top: 1px solid rgba(255,255,255,.04);
+    }
+    .footer-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      padding: 5rem 0 4rem;
+    }
+    @media(min-width:640px)  { .footer-body { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+    @media(min-width:1024px) { .footer-body { grid-template-columns: 2.2fr 1fr 1fr 1fr; gap: 2rem; } }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 1.75rem;
+      line-height: 1;
+    }
+    .footer-logo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.875rem;
+      font-weight: 300;
+      letter-spacing: .2em;
+      color: var(--ivory);
+      display: block;
+    }
+    .footer-logo-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--stone);
+      display: block;
+    }
+    .footer-about {
+      font-family: 'Inter', sans-serif;
+      font-size: .75rem;
+      line-height: 1.85;
+      color: var(--stone);
+      max-width: 18rem;
+      margin-bottom: 2rem;
+    }
+    .footer-contact-link {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .7rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-bottom: .75rem;
+      transition: color .3s;
+    }
+    .footer-contact-link:hover { color: var(--stone-light); }
+    .footer-contact-link svg { flex-shrink: 0; margin-top: 1px; }
+
+    .footer-col-title {
+      font-family: 'Inter', sans-serif;
+      font-size: .5rem;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
+    .footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: .725rem;
+      color: var(--stone);
+      position: relative;
+      transition: color .3s;
+    }
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0;
+      width: 0; height: 1px;
+      background: var(--stone-light);
+      transition: width .38s;
+    }
+    .footer-links a:hover { color: var(--stone-light); }
+    .footer-links a:hover::after { width: 100%; }
+
+    .footer-rule {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,150,90,.18), transparent);
+    }
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.75rem 0;
+    }
+    @media(min-width:768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+    .footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-size: .6rem;
+      letter-spacing: .06em;
+      color: var(--stone);
+    }
+    .back-top {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .6rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--stone);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color .3s;
+    }
+    .back-top:hover { color: var(--gold); }
+    .footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.25rem; }
+    .footer-legal a {
+      font-family: 'Inter', sans-serif;
+      font-size: .6rem;
+      letter-spacing: .06em;
+      color: var(--stone);
+      transition: color .3s;
+    }
+    .footer-legal a:hover { color: var(--gold); }
+
+    /* Menos movimiento si el usuario lo ha pedido en su sistema */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<header id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Nell — Inicio">
+        <span class="nav-logo-name">NELL</span>
+        <span class="nav-logo-sub">Joyería · Relojería</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#colecciones">Colecciones</a></li>
+          <li><a href="#relojeria">Relojería</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#historia">Historia</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:1.25rem;">
+        <a href="#cita" class="nav-cta">Reservar Cita</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" role="dialog" aria-label="Menú de navegación">
+  <a href="#colecciones" class="mobile-menu-link" onclick="closeMobileMenu()">Colecciones</a>
+  <a href="#relojeria"   class="mobile-menu-link" onclick="closeMobileMenu()">Relojería</a>
+  <a href="#servicios"   class="mobile-menu-link" onclick="closeMobileMenu()">Servicios</a>
+  <a href="#historia"    class="mobile-menu-link" onclick="closeMobileMenu()">Historia</a>
+  <a href="#contacto"    class="mobile-menu-link" onclick="closeMobileMenu()">Contacto</a>
+  <a href="#cita"        class="mobile-menu-cta"  onclick="closeMobileMenu()">Reservar Cita</a>
+  <address class="mobile-menu-addr">
+    C. Pedro Antonio de Alarcón, 45 · Granada<br>
+    <a href="tel:+34958267401" style="color:inherit;">+34 958 26 74 01</a>
+  </address>
+</div>
+
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero" aria-label="Portada">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-line hero-line-l" aria-hidden="true"></div>
+  <div class="hero-line hero-line-r" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line" aria-hidden="true"></div>
+      <span class="hero-eyebrow-text">Granada · Desde 1985</span>
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="hero-h1-line">
+        <span class="hero-h1-inner">Joyería y relojería</span>
+      </span>
+      <span class="hero-h1-line">
+        <span class="hero-h1-inner"><span class="hero-h1-gold">en Granada</span></span>
+      </span>
+    </h1>
+
+    <div class="hero-divider" aria-hidden="true"></div>
+
+    <p class="hero-sub">
+      El tiempo que permanece. Joyas y relojes de alta gama, con décadas de tradición artesanal en el corazón de Granada.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#colecciones" class="btn-primary">
+        Ver Colecciones
+        <svg width="15" height="7" viewBox="0 0 15 7" fill="none" aria-hidden="true">
+          <path d="M0 3.5H13M13 3.5L10 0.5M13 3.5L10 6.5" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </a>
+      <a href="#cita" class="btn-outline">Reservar Cita</a>
+    </div>
+
+    <div class="hero-addr">
+      <svg width="13" height="15" viewBox="0 0 13 15" fill="none" aria-hidden="true">
+        <circle cx="6.5" cy="5.5" r="2.5" stroke="currentColor" stroke-width="1"/>
+        <path d="M6.5 1C4.01 1 2 3.01 2 5.5C2 8.75 6.5 14 6.5 14C6.5 14 11 8.75 11 5.5C11 3.01 8.99 1 6.5 1Z" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      <span class="hero-addr-text">C. Pedro Antonio de Alarcón, 45 — Granada</span>
+    </div>
+  </div>
+
+  <!-- Desktop phone hint -->
+  <div class="hero-contact-hint" aria-hidden="true">
+    <span class="hero-contact-text">+34 958 26 74 01</span>
+    <div class="hero-contact-line"></div>
+  </div>
+
+  <!-- Scroll cue -->
+  <button class="scroll-cue" onclick="document.getElementById('colecciones').scrollIntoView({behavior:'smooth'})" aria-label="Ir a colecciones">
+    <span class="scroll-cue-text">Descubrir</span>
+    <div class="scroll-cue-bar" aria-hidden="true"></div>
+  </button>
+</section>
+
+
+<!-- ══════════ COLLECTIONS ══════════ -->
+<!-- FOTOS: todas son de stock (Unsplash) y llevan alt="" mientras tanto. Sustituir por fotos reales
+     y poner el alt propuesto en PENDIENTES-CLIENTE.md -->
+<section id="colecciones" class="section-pad">
+  <div class="container">
+
+    <div class="eyebrow reveal">
+      <div class="eyebrow-line dark"></div>
+      <span class="eyebrow-text">Colecciones</span>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title on-light reveal">
+        Joyas que cuentan<br><em>tu historia</em>
+      </h2>
+      <p class="section-header-text reveal d2">
+        Cada pieza nace de un diálogo entre el artesano y el material. Seleccionamos únicamente metales y piedras de la más alta calidad.
+      </p>
+    </div>
+
+    <div class="gold-rule w-med"></div>
+
+    <div class="coll-grid">
+
+      <article class="coll-card reveal">
+        <div class="coll-img-wrap">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <span class="coll-badge">Más solicitado</span>
+          <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
+        </div>
+        <div class="coll-body">
+          <div class="coll-body-top">
+            <h3 class="coll-name">Anillos & Compromiso</h3>
+            <div class="coll-accent-line" aria-hidden="true"></div>
+          </div>
+          <p class="coll-desc">Cada anillo es un testimonio de amor eterno. Diseños únicos en oro, platino y piedras preciosas seleccionadas con maestría.</p>
+        </div>
+      </article>
+
+      <article class="coll-card reveal d1">
+        <div class="coll-img-wrap">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
+        </div>
+        <div class="coll-body">
+          <div class="coll-body-top">
+            <h3 class="coll-name">Collares & Colgantes</h3>
+            <div class="coll-accent-line" aria-hidden="true"></div>
+          </div>
+          <p class="coll-desc">Piezas que enmarcan la elegancia natural de quien las lleva. Oro amarillo, blanco y rosa trabajados con precisión artesanal.</p>
+        </div>
+      </article>
+
+      <article class="coll-card reveal d2">
+        <div class="coll-img-wrap">
+          <img src="https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
+        </div>
+        <div class="coll-body">
+          <div class="coll-body-top">
+            <h3 class="coll-name">Pendientes</h3>
+            <div class="coll-accent-line" aria-hidden="true"></div>
+          </div>
+          <p class="coll-desc">Desde la delicadeza de un solitario de diamante hasta piezas de autor. Arte que enmarca el rostro con elegancia.</p>
+        </div>
+      </article>
+
+      <article class="coll-card reveal d3">
+        <div class="coll-img-wrap">
+          <img src="https://images.unsplash.com/photo-1617191880362-aac615de3c26?w=600&q=80&fit=crop" alt="" loading="lazy" />
+          <div class="coll-overlay" aria-hidden="true"></div>
+          <span class="coll-badge">Nueva colección</span>
+          <div class="coll-explore" aria-hidden="true"><span>Explorar</span></div>
+        </div>
+        <div class="coll-body">
+          <div class="coll-body-top">
+            <h3 class="coll-name">Pulseras & Brazaletes</h3>
+            <div class="coll-accent-line" aria-hidden="true"></div>
+          </div>
+          <p class="coll-desc">La muñeca como lienzo. Pulseras artesanales que combinan tradición orfebre con sensibilidad contemporánea.</p>
+        </div>
+      </article>
+
+    </div><!-- /coll-grid -->
+
+    <div class="coll-footer reveal">
+      <p>¿Buscas algo especial? Creamos joyas únicas bajo pedido.</p>
+      <a href="#cita" class="link-arrow">
+        Consultar diseño personalizado
+        <svg width="13" height="6" viewBox="0 0 13 6" fill="none" aria-hidden="true">
+          <path d="M0 3H11M11 3L8.5 0.5M11 3L8.5 5.5" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════ WATCHES ══════════ -->
+<section id="relojeria" class="section-pad">
+  <div class="container">
+
+    <div class="eyebrow reveal">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Alta Relojería</span>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title reveal">
+        El arte de medir<br><em>el tiempo</em>
+      </h2>
+      <p class="section-header-text reveal d2" style="color:var(--stone);">
+        Distribuidores oficiales y asesores de los mejores fabricantes suizos y japoneses. Le ayudamos a encontrar el reloj que lo definirá.
+      </p>
+    </div>
+
+    <div class="gold-rule w-med"></div>
+
+    <div class="watch-cards">
+
+      <div class="watch-card reveal">
+        <div class="watch-img-wrap">
+          <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=900&q=80&fit=crop" alt="" loading="lazy" />
+          <div class="watch-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="watch-body">
+          <p class="watch-sub">Colección Sport &amp; Dress</p>
+          <h3 class="watch-title">Alta Relojería Suiza</h3>
+          <div class="watch-rule" aria-hidden="true"></div>
+          <p class="watch-desc">Relojes de manufactura suiza donde cada mecanismo es una obra de ingeniería. Precisión que se hereda.</p>
+          <a href="#cita" class="watch-cta">
+            Consultar disponibilidad
+            <svg width="15" height="7" viewBox="0 0 15 7" fill="none" aria-hidden="true">
+              <path d="M0 3.5H13M13 3.5L10 0.5M13 3.5L10 6.5" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="watch-card reverse reveal d1">
+        <div class="watch-img-wrap">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&q=80&fit=crop" alt="" loading="lazy" />
+          <div class="watch-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="watch-body">
+          <p class="watch-sub">Colección Heritage</p>
+          <h3 class="watch-title">Clásicos Atemporales</h3>
+          <div class="watch-rule" aria-hidden="true"></div>
+          <p class="watch-desc">Los grandes clásicos que han marcado la historia de la relojería. Piezas que aumentan su valor con el paso de los años.</p>
+          <a href="#cita" class="watch-cta">
+            Consultar disponibilidad
+            <svg width="15" height="7" viewBox="0 0 15 7" fill="none" aria-hidden="true">
+              <path d="M0 3.5H13M13 3.5L10 0.5M13 3.5L10 6.5" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /watch-cards -->
+
+    <div class="brands-section reveal">
+      <p class="brands-label">Marcas disponibles en tienda</p>
+      <div class="brands-grid">
+        <div class="brand-cell"><span class="brand-name">Rolex</span><span class="brand-desc">Excelencia suiza perpetua</span></div>
+        <div class="brand-cell"><span class="brand-name">Omega</span><span class="brand-desc">Precisión al más alto nivel</span></div>
+        <div class="brand-cell"><span class="brand-name">TAG Heuer</span><span class="brand-desc">Rendimiento &amp; elegancia</span></div>
+        <div class="brand-cell"><span class="brand-name">Longines</span><span class="brand-desc">Tradición y sofisticación</span></div>
+        <div class="brand-cell"><span class="brand-name">Seiko</span><span class="brand-desc">Maestría japonesa</span></div>
+        <div class="brand-cell"><span class="brand-name">Tissot</span><span class="brand-desc">Innovación accesible</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════ SERVICES ══════════ -->
+<section id="servicios" class="section-pad">
+  <div class="container">
+
+    <div class="eyebrow reveal">
+      <div class="eyebrow-line dark"></div>
+      <span class="eyebrow-text">Servicios</span>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title on-light reveal">
+        El cuidado que sus<br><em>joyas merecen</em>
+      </h2>
+      <p class="section-header-text reveal d2">
+        Más de tres décadas perfeccionando el arte de la restauración. Cada pieza que entra en nuestro taller recibe la misma dedicación que si fuera nuestra.
+      </p>
+    </div>
+
+    <div class="gold-rule w-med"></div>
+
+    <div class="svc-grid">
+
+      <div class="svc-card reveal">
+        <div class="svc-num" aria-hidden="true">01</div>
+        <h3 class="svc-title">Reparación de Joyas</h3>
+        <div class="svc-rule" aria-hidden="true"></div>
+        <p class="svc-desc">Restauramos el esplendor original de sus piezas más preciadas. Soldaduras, engastes, pulido y reconstrucción con el máximo cuidado artesanal.</p>
+        <ul class="svc-list">
+          <li><span class="svc-dot" aria-hidden="true"></span>Soldadura de piezas rotas</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Cambio y reengaste de piedras</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Pulido y rodio</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Redimensionado de anillos</li>
+        </ul>
+      </div>
+
+      <div class="svc-card reveal d1">
+        <div class="svc-num" aria-hidden="true">02</div>
+        <h3 class="svc-title">Reparación de Relojes</h3>
+        <div class="svc-rule" aria-hidden="true"></div>
+        <p class="svc-desc">Servicio técnico oficial para las principales marcas. Nuestros relojeros certificados garantizan cada revisión con la precisión que su reloj merece.</p>
+        <ul class="svc-list">
+          <li><span class="svc-dot" aria-hidden="true"></span>Revisión y limpieza de movimiento</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Sustitución de piezas originales</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Impermeabilización</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Cambio de correas y brazaletes</li>
+        </ul>
+      </div>
+
+      <div class="svc-card reveal d2">
+        <div class="svc-num" aria-hidden="true">03</div>
+        <h3 class="svc-title">Restauración & Antigüedades</h3>
+        <div class="svc-rule" aria-hidden="true"></div>
+        <p class="svc-desc">Devolvemos la vida a piezas antiguas y de colección. Con técnicas tradicionales de orfebrería recuperamos el valor histórico y estético de joyas con historia.</p>
+        <ul class="svc-list">
+          <li><span class="svc-dot" aria-hidden="true"></span>Análisis y valoración inicial</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Restauración conservadora</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Reconstrucción de piezas</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Documentación del proceso</li>
+        </ul>
+      </div>
+
+      <div class="svc-card reveal d3">
+        <div class="svc-num" aria-hidden="true">04</div>
+        <h3 class="svc-title">Tasación Oficial</h3>
+        <div class="svc-rule" aria-hidden="true"></div>
+        <p class="svc-desc">Certificados de tasación oficiales para seguros, herencias y transacciones. Nuestros peritos certificados emiten documentación con total validez legal.</p>
+        <ul class="svc-list">
+          <li><span class="svc-dot" aria-hidden="true"></span>Tasación para seguros</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Valoración de herencias</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Peritajes judiciales</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Certificados de autenticidad</li>
+        </ul>
+      </div>
+
+    </div><!-- /svc-grid -->
+
+    <div class="svc-banner reveal">
+      <div class="svc-banner-text">
+        <p class="svc-banner-title">Presupuesto siempre gratuito y sin compromiso.</p>
+        <p>Traiga su pieza a nuestra tienda y nuestros expertos la evaluarán con total transparencia antes de iniciar cualquier trabajo.</p>
+      </div>
+      <a href="tel:+34958267401" class="btn-call">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 2H5L6.5 5.5L4.5 7C5.5 9 7 10.5 9 11.5L10.5 9.5L14 11V14C14 14 11 14 7 10C3 6 2 2 2 2Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Llamar ahora
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════ HERITAGE ══════════ -->
+<section id="historia" class="section-pad">
+  <div class="container">
+
+    <div class="eyebrow reveal">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Nuestra Historia</span>
+    </div>
+
+    <div class="heritage-grid">
+
+      <!-- Image (first in DOM → visible on mobile before text) -->
+      <div class="heritage-img-wrap reveal d1">
+        <div class="heritage-img">
+          <img src="https://images.unsplash.com/photo-1655111396188-8dd88ceb8b4d?w=700&q=80&fit=crop" alt="" loading="lazy" />
+        </div>
+        <div class="heritage-deco-br" aria-hidden="true"></div>
+        <div class="heritage-deco-tl" aria-hidden="true"></div>
+      </div>
+
+      <!-- Text (order:1 on desktop → stays left column) -->
+      <div class="heritage-text-col">
+        <h2 class="heritage-title reveal">
+          Décadas de <em>oficio</em>,<br>una sola promesa.
+        </h2>
+        <div class="heritage-rule reveal"></div>
+        <div class="heritage-copy reveal d1">
+          <p>Joyería Relojería Nell abrió sus puertas en Granada hace más de cuatro décadas. Desde el primer día, nuestra familia entendió que vender joyas y relojes no es simplemente un comercio: es custodiar los momentos más significativos de la vida de las personas.</p>
+          <p>Un anillo de compromiso, un reloj heredado del abuelo, una pulsera que recuerda un viaje especial. Cada pieza que pasa por nuestras manos tiene un peso emocional que nos obliga a tratarla con el máximo respeto y maestría.</p>
+          <p>Situados en el corazón de Granada, en la calle Pedro Antonio de Alarcón, hemos servido a generaciones de familias granadinas que regresan año tras año.</p>
+        </div>
+        <div class="heritage-values reveal d2">
+          <div class="heritage-value">
+            <span class="heritage-value-num" aria-hidden="true">1</span>
+            <div class="heritage-value-body">
+              <h3>Tradición</h3>
+              <p>Técnicas orfebres heredadas y perfeccionadas durante décadas. El saber hacer no se improvisa.</p>
+            </div>
+          </div>
+          <div class="heritage-value">
+            <span class="heritage-value-num" aria-hidden="true">2</span>
+            <div class="heritage-value-body">
+              <h3>Confianza</h3>
+              <p>Cada cliente que nos entrega una pieza nos confía un pedazo de su historia. Lo tratamos como tal.</p>
+            </div>
+          </div>
+          <div class="heritage-value">
+            <span class="heritage-value-num" aria-hidden="true">3</span>
+            <div class="heritage-value-body">
+              <h3>Excelencia</h3>
+              <p>Jamás entregamos un trabajo que no cumpla con nuestros propios estándares. La calidad no es negociable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /heritage-grid -->
+
+    <!-- Timeline -->
+    <div class="timeline reveal">
+      <p class="timeline-label">Nuestra trayectoria</p>
+      <div class="timeline-grid">
+        <div class="timeline-cell">
+          <span class="timeline-year">1985</span>
+          <span class="timeline-event">Fundación de la joyería en Granada</span>
+        </div>
+        <div class="timeline-cell">
+          <span class="timeline-year">1998</span>
+          <span class="timeline-event">Ampliación del taller de restauración</span>
+        </div>
+        <div class="timeline-cell">
+          <span class="timeline-year">2010</span>
+          <span class="timeline-event">Distribución oficial de marcas suizas</span>
+        </div>
+        <div class="timeline-cell">
+          <span class="timeline-year">Hoy</span>
+          <span class="timeline-event">Tres generaciones de excelencia artesanal</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section id="testimonios" class="section-pad">
+  <div class="container">
+
+    <div class="eyebrow reveal">
+      <div class="eyebrow-line dark"></div>
+      <span class="eyebrow-text">Testimonios</span>
+    </div>
+
+    <div class="section-header" style="margin-bottom:3rem;">
+      <h2 class="section-title on-light reveal">
+        Lo que dicen quienes<br><em>confían en nosotros</em>
+      </h2>
+    </div>
+
+    <div class="gold-rule w-med"></div>
+
+    <div class="testimonial-wrap">
+      <div class="big-quote" aria-hidden="true">&ldquo;</div>
+
+      <!-- TESTIMONIOS: confirmar con el cliente que son reseñas reales y que tiene permiso para publicarlas -->
+      <div class="testi-slides" id="testi-slides">
+        <figure class="testi-slide active" id="testi-1">
+          <blockquote class="testimonial-text">
+            Llevé el reloj de mi padre para repararlo, pensando que ya no tenía solución. En Nell lo dejaron como nuevo. El cuidado con el que trataron una pieza tan personal fue conmovedor.
+          </blockquote>
+          <figcaption class="testimonial-author">
+            <div class="author-rule" aria-hidden="true"></div>
+            <div>
+              <p class="author-name">María Carmen R.</p>
+              <p class="author-ctx">Restauración de reloj de familia · Granada</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testi-slide" id="testi-2">
+          <blockquote class="testimonial-text">
+            Compramos los anillos de compromiso en Nell hace ocho años. Siguen siendo perfectos, y cada vez que volvemos a la tienda nos reciben como si fuéramos familia. Eso no tiene precio.
+          </blockquote>
+          <figcaption class="testimonial-author">
+            <div class="author-rule" aria-hidden="true"></div>
+            <div>
+              <p class="author-name">Alejandro &amp; Sofía M.</p>
+              <p class="author-ctx">Anillos de compromiso · Granada</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testi-slide" id="testi-3">
+          <blockquote class="testimonial-text">
+            La tasación fue impecable: profesional, documentada y completamente transparente. Nunca me sentí presionado. Solo asesoramiento honesto del principio al fin.
+          </blockquote>
+          <figcaption class="testimonial-author">
+            <div class="author-rule" aria-hidden="true"></div>
+            <div>
+              <p class="author-name">Francisco J. L.</p>
+              <p class="author-ctx">Tasación oficial · Granada</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testi-slide" id="testi-4">
+          <blockquote class="testimonial-text">
+            Buscaba un Longines específico y me ayudaron a encontrarlo, me explicaron cada detalle técnico y me dieron el tiempo que necesitaba para decidir. Rara vez se ve ese nivel de servicio.
+          </blockquote>
+          <figcaption class="testimonial-author">
+            <div class="author-rule" aria-hidden="true"></div>
+            <div>
+              <p class="author-name">Isabel T.</p>
+              <p class="author-ctx">Compra de reloj · Armilla, Granada</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="testi-nav">
+        <button type="button" class="testi-btn" onclick="changeT(-1)" aria-label="Testimonio anterior">
+          <svg width="15" height="7" viewBox="0 0 15 7" fill="none" style="transform:rotate(180deg)" aria-hidden="true">
+            <path d="M0 3.5H13M13 3.5L10 0.5M13 3.5L10 6.5" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </button>
+        <div class="dots" id="testi-dots">
+          <button type="button" class="dot active" onclick="goT(0)" aria-label="Testimonio 1" aria-current="true"></button>
+          <button type="button" class="dot"        onclick="goT(1)" aria-label="Testimonio 2"></button>
+          <button type="button" class="dot"        onclick="goT(2)" aria-label="Testimonio 3"></button>
+          <button type="button" class="dot"        onclick="goT(3)" aria-label="Testimonio 4"></button>
+        </div>
+        <button type="button" class="testi-btn" onclick="changeT(1)" aria-label="Testimonio siguiente">
+          <svg width="15" height="7" viewBox="0 0 15 7" fill="none" aria-hidden="true">
+            <path d="M0 3.5H13M13 3.5L10 0.5M13 3.5L10 6.5" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- ENLACE PROVISIONAL: búsqueda en Google Maps. Sustituir por el enlace de la ficha real del cliente -->
+      <div class="rating-strip reveal">
+        <a class="rating-link" href="https://www.google.com/maps/search/?api=1&amp;query=Joyer%C3%ADa+Relojer%C3%ADa+Nell%2C+Calle+Pedro+Antonio+de+Alarc%C3%B3n+45%2C+Granada" target="_blank" rel="noopener noreferrer">
+        <div class="stars-row" aria-hidden="true">
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
+          <svg width="14" height="13" viewBox="0 0 14 13" fill="#B8965A"><path d="M7 0L8.8 4.6L13.7 5.1L10 8.5L11 13L7 10.6L3 13L4 8.5L0.3 5.1L5.2 4.6L7 0Z"/></svg>
+        </div>
+        <p class="rating-text">Valoración media de <strong>4,9 / 5</strong> en más de 200 reseñas de Google · <span>Ver reseñas</span><span class="visually-hidden"> (se abre en una pestaña nueva)</span></p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════ APPOINTMENT ══════════ -->
+<section id="cita">
+  <div class="container" style="position:relative;z-index:1;text-align:center;">
+
+    <div class="cita-eyebrow reveal">
+      <div class="cita-eyebrow-line" aria-hidden="true"></div>
+      <span class="cita-eyebrow-text">Atención personalizada</span>
+      <div class="cita-eyebrow-line" aria-hidden="true"></div>
+    </div>
+
+    <h2 class="cita-title reveal">
+      Cada visita comienza<br><em>con una conversación.</em>
+    </h2>
+
+    <p class="cita-sub reveal d1">
+      Reserve su cita y dedíquenos el tiempo necesario para entender exactamente lo que busca. Sin prisa, sin presión. Solo el placer de ayudarle a encontrar la pieza perfecta.
+    </p>
+
+    <div class="cita-btns reveal d2">
+      <a href="tel:+34958267401" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 2H5L6.5 5.5L4.5 7C5.5 9 7 10.5 9 11.5L10.5 9.5L14 11V14C14 14 11 14 7 10C3 6 2 2 2 2Z" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        +34 958 26 74 01
+      </a>
+      <a href="#contacto" class="btn-outline">Cómo llegar</a>
+    </div>
+
+    <div class="reveal d3" style="display:flex;justify-content:center;">
+      <div class="hours-box">
+        <div class="hour-block">
+          <p class="hour-label">Lunes a Viernes</p>
+          <p class="hour-val">10:00 – 14:00 &nbsp;·&nbsp; 17:00 – 20:30</p>
+        </div>
+        <div class="hour-sep" aria-hidden="true"></div>
+        <div class="hour-block">
+          <p class="hour-label">Sábados</p>
+          <p class="hour-val">10:00 – 14:00</p>
+        </div>
+        <div class="hour-sep" aria-hidden="true"></div>
+        <div class="hour-block">
+          <p class="hour-label">Domingos</p>
+          <p class="hour-val closed">Cerrado</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contacto" class="section-pad">
+  <div class="container">
+
+    <div class="eyebrow reveal">
+      <div class="eyebrow-line dark"></div>
+      <span class="eyebrow-text">Contacto &amp; Visita</span>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title on-light reveal">
+        Estamos en el<br><em>corazón de Granada</em>
+      </h2>
+      <p class="section-header-text reveal d2">
+        Visítenos sin cita previa o llámenos para reservar su momento. Estaremos encantados de atenderle con la dedicación que merece.
+      </p>
+    </div>
+
+    <div class="gold-rule w-med"></div>
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info">
+
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="6.5" r="2.8" stroke="currentColor" stroke-width="1"/>
+              <path d="M8.5 1C5.46 1 3 3.46 3 6.5C3 10.5 8.5 16 8.5 16C8.5 16 14 10.5 14 6.5C14 3.46 11.54 1 8.5 1Z" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-label">Dirección</p>
+            <a href="https://maps.google.com/?q=C.+Pedro+Antonio+de+Alarcon,+45,+18002+Granada" target="_blank" rel="noopener noreferrer" class="contact-val">
+              C. Pedro Antonio de Alarcón, 45
+            </a>
+            <p class="contact-sub">18002 Granada, España</p>
+          </div>
+        </div>
+
+        <div class="contact-item reveal d1">
+          <div class="contact-icon">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" aria-hidden="true">
+              <path d="M2.5 2.5H6L7.5 6.5L5 8.5C6 11 8.5 13.5 11 14.5L13 12L17 13.5V17C17 17 13 17 8.5 12.5C4 8 2.5 2.5 2.5 2.5Z" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-label">Teléfono</p>
+            <a href="tel:+34958267401" class="contact-val">+34 958 26 74 01</a>
+            <p class="contact-sub">Llame para consultas y reservas de cita</p>
+          </div>
+        </div>
+
+        <div class="contact-item reveal d2">
+          <div class="contact-icon">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="8.5" r="6.5" stroke="currentColor" stroke-width="1"/>
+              <path d="M8.5 5V9.5L11 12" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-label">Horario</p>
+            <p class="contact-val">L–V: 10:00–14:00 / 17:00–20:30</p>
+            <p class="contact-sub">Sábados: 10:00–14:00 · Domingos: Cerrado</p>
+          </div>
+        </div>
+
+        <div class="contact-sep" aria-hidden="true"></div>
+
+        <div class="contact-note reveal d2">
+          <h3>¿Necesita tasación urgente o restauración especial?</h3>
+          <p>Para trabajos complejos o valoraciones de herencias, contáctenos previamente para preparar la atención más adecuada.</p>
+          <a href="tel:+34958267401" class="link-arrow">
+            Llamar directamente
+            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" aria-hidden="true">
+              <path d="M0 3H10M10 3L7.5 0.5M10 3L7.5 5.5" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Map -->
+      <div class="map-wrap reveal d1" id="map-wrap" data-src="https://www.google.com/maps?q=Calle+Pedro+Antonio+de+Alarc%C3%B3n+45,+Granada&amp;output=embed&amp;z=16&amp;hl=es">
+        <div class="map-placeholder">
+          <p class="map-ph-name">Joyería Relojería Nell</p>
+          <p class="map-ph-addr">C. Pedro Antonio de Alarcón, 45<br>18002 Granada</p>
+          <div class="map-ph-btns">
+            <button type="button" class="btn-outline map-load" id="map-load">Ver mapa aquí</button>
+            <a class="btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Calle+Pedro+Antonio+de+Alarc%C3%B3n+45%2C+Granada" target="_blank" rel="noopener noreferrer">Cómo llegar<span class="visually-hidden"> (Google Maps, se abre en una pestaña nueva)</span></a>
+          </div>
+          <p class="map-ph-note">El mapa es de Google y se carga solo si lo pide. Al cargarlo, Google puede usar cookies. <a href="cookies.html">Más información</a></p>
+        </div>
+        <div class="map-border" aria-hidden="true"></div>
+        <div class="map-caption" aria-hidden="true">
+          <p>Joyería Relojería Nell</p>
+          <p>C. Pedro Antonio de Alarcón, 45 · 18002 Granada</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-body">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="footer-logo" aria-label="Nell — Inicio">
+          <span class="footer-logo-name">NELL</span>
+          <span class="footer-logo-sub">Joyería · Relojería</span>
+        </a>
+        <p class="footer-about">Tradición orfebre y atención personalizada en el corazón de Granada desde 1985. Cada pieza, cada visita, es un privilegio.</p>
+        <a href="https://maps.google.com/?q=C.+Pedro+Antonio+de+Alarcon,+45,+Granada" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
+          <svg width="12" height="13" viewBox="0 0 12 13" fill="none" aria-hidden="true">
+            <circle cx="6" cy="4.5" r="2" stroke="currentColor" stroke-width="1"/>
+            <path d="M6 1C3.79 1 2 2.79 2 5C2 7.75 6 12 6 12S10 7.75 10 5C10 2.79 8.21 1 6 1Z" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <span>C. Pedro Antonio de Alarcón, 45<br>18002 Granada, España</span>
+        </a>
+        <a href="tel:+34958267401" class="footer-contact-link">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M1 1H3.5L5 4.5L3 6C4 8 6 10 8 11L9.5 9L13 10.5V13C13 13 10 13 6.5 9.5C3 6 1 1 1 1Z" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          <span>+34 958 26 74 01</span>
+        </a>
+      </div>
+
+      <!-- Colecciones -->
+      <div>
+        <p class="footer-col-title">Colecciones</p>
+        <ul class="footer-links">
+          <li><a href="#colecciones">Anillos &amp; Compromiso</a></li>
+          <li><a href="#colecciones">Collares &amp; Colgantes</a></li>
+          <li><a href="#colecciones">Pendientes</a></li>
+          <li><a href="#colecciones">Pulseras</a></li>
+        </ul>
+      </div>
+
+      <!-- Servicios -->
+      <div>
+        <p class="footer-col-title">Servicios</p>
+        <ul class="footer-links">
+          <li><a href="#servicios">Reparación de Joyas</a></li>
+          <li><a href="#servicios">Reparación de Relojes</a></li>
+          <li><a href="#servicios">Restauración</a></li>
+          <li><a href="#servicios">Tasación Oficial</a></li>
+        </ul>
+      </div>
+
+      <!-- Tienda -->
+      <div>
+        <p class="footer-col-title">Tienda</p>
+        <ul class="footer-links">
+          <li><a href="#relojeria">Alta Relojería</a></li>
+          <li><a href="#historia">Nuestra Historia</a></li>
+          <li><a href="#cita">Reservar Cita</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-rule"></div>
+
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">© <span id="year">2026</span> Joyería Relojería Nell · Granada · Todos los derechos reservados</p>
+      <nav class="footer-legal" aria-label="Información legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="cookies.html">Política de cookies</a>
+      </nav>
+      <button type="button" class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Volver arriba
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="transform:rotate(-90deg)" aria-hidden="true">
+          <path d="M0 5H8M8 5L5 2M8 5L5 8" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════ JAVASCRIPT ══════════ -->
+<script>
+(function() {
+  'use strict';
+
+  /* ── Navbar scroll behaviour ── */
+  const navbar = document.getElementById('navbar');
+  function onScroll() {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── Mobile menu ── */
+  const hamburger  = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function openMobileMenu() {
+    mobileMenu.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  window.closeMobileMenu = function() {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+  hamburger.addEventListener('click', function() {
+    mobileMenu.classList.contains('open') ? closeMobileMenu() : openMobileMenu();
+  });
+  /* Close on overlay click */
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+
+  /* ── Smooth anchor scroll ── */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      closeMobileMenu();
+      setTimeout(function() { target.scrollIntoView({ behavior: 'smooth' }); }, 60);
+    });
+  });
+
+  /* ── Intersection Observer: scroll reveal ── */
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  /* ── Intersection Observer: gold rules ── */
+  var ruleObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('animated');
+        ruleObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.gold-rule').forEach(function(el) {
+    ruleObserver.observe(el);
+  });
+
+  /* ── Intersection Observer: service card gold line ── */
+  var svcObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('line-visible');
+        svcObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.25 });
+  document.querySelectorAll('.svc-card').forEach(function(el) {
+    svcObserver.observe(el);
+  });
+
+  /* ── Testimonials (el contenido está en el HTML) ── */
+  var slides    = document.querySelectorAll('.testi-slide');
+  var testiDots = document.querySelectorAll('#testi-dots .dot');
+  var testiWrap = document.querySelector('.testimonial-wrap');
+  var currentT  = 0;
+  var paused    = false;
+
+  function showTestimonial(i) {
+    var old = slides[currentT];
+    old.classList.add('fading');
+    setTimeout(function() {
+      old.classList.remove('active', 'fading');
+      currentT = i;
+      slides[currentT].classList.add('active');
+    }, 350);
+    testiDots.forEach(function(d, j) {
+      d.classList.toggle('active', j === i);
+      if (j === i) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
+    });
+  }
+  window.changeT = function(dir) { showTestimonial((currentT + dir + slides.length) % slides.length); };
+  window.goT     = function(i)   { if (i !== currentT) showTestimonial(i); };
+
+  /* Cambio automático cada 6 s: se para con el ratón encima o con el foco dentro,
+     y no se activa si el usuario prefiere menos movimiento */
+  ['mouseenter', 'focusin'].forEach(function(ev) { testiWrap.addEventListener(ev, function() { paused = true; }); });
+  ['mouseleave', 'focusout'].forEach(function(ev) { testiWrap.addEventListener(ev, function() { paused = false; }); });
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(function() { if (!paused && !document.hidden) changeT(1); }, 6000);
+  }
+
+  /* ── Mapa: se carga al pulsar «Ver mapa aquí» ── */
+  var mapWrap = document.getElementById('map-wrap');
+  document.getElementById('map-load').addEventListener('click', function() {
+    var f = document.createElement('iframe');
+    f.src = mapWrap.getAttribute('data-src');
+    f.title = 'Mapa: Joyería Relojería Nell, C. Pedro Antonio de Alarcón 45, Granada';
+    f.setAttribute('allowfullscreen', '');
+    f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    mapWrap.insertBefore(f, mapWrap.firstChild);
+    mapWrap.classList.add('loaded');
+  });
+
+  /* ── Año del copyright ── */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
